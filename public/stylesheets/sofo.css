@@ -1,0 +1,119 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: #FFFFFF;
+	font-family: "Lucida Grande", Verdana, sans-serif;
+	font-size: 100%;
+}
+
+a { 
+	color: #2F637A; 
+	background: inherit; 
+}
+
+a:hover {
+	color: #808080; 
+	background: inherit; 
+}
+
+p {	
+	margin: 0 0 12px 0; 
+}
+
+h1 {	
+	font: bold 2.2em Arial, Sans-Serif; 
+	padding: 8px 0 0 0; 
+	margin: 0; 
+	letter-spacing: -1px; 
+}
+
+h2 { 
+	margin: 0; 
+	padding: 0; font: bold 1.8em Arial, Sans-Serif; 
+	letter-spacing: -1px; 
+}
+
+h1 a, h2 a { 
+	color: #000; 
+	background: inherit; 
+	text-decoration: none; 
+}
+
+ul { 
+	margin: 0; 
+	padding : 0; 
+	list-style : none; 
+}
+
+img { 
+	border: 0; 
+}
+
+#body { 
+	margin: 10px auto; 
+	width: 960px; 
+}
+
+/* MainNav */
+div#MainNav {
+	position: absolute;
+	left: 5px;
+	top: 5px;
+}
+
+div#MainNav ul#list li { 
+	list-style: none; 
+	display: inline; 
+	margin: 0;
+}
+/* End: MainNav */
+
+/* SecNav */
+div#SecNav {
+	position: absolute;
+	left: 600px;
+	top: 5px;
+}
+
+div#SecNav ul#list li { 
+	list-style: none; 
+	display: inline; 
+	margin: 0;
+}
+/* End: SecNav */
+
+/* FooterNav */
+div#FooterNav {
+	position: absolute;
+	left: 5px;
+	top: 800px;
+}
+
+div#FooterNav ul#list li { 
+	list-style: none; 
+	display: inline; 
+	margin: 0;
+}
+/* End: FooterNav */
+
+/* MenuNav */
+div#MenuNav {
+	position: absolute;
+	left: 5px;
+	top: 100px;
+}
+
+div#MenuNav ul#list li { 
+	list-style: none; 
+	display: inline; 
+	margin: 0;
+}
+/* End: MenuNav */
+
+/* MainContent */
+div#MainContent {
+	position: absolute;
+	left: 5px;
+	top: 120px;
+}
+/* End: MainContent */

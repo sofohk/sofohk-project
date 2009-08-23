@@ -1,0 +1,48 @@
+<fieldset>
+<legend>User Detail</legend>
+	<table id="table-type-2">
+		<tr>
+			<td colspan="2">
+  			<%= image_tag @user.image.url(:thumb), :class => 'user-image', :size => "75x75" %>
+			</td>
+		</tr>
+		<tr>
+			<td clase="label">
+				<b>loginname</b></td>
+			<td class="data">
+				<%= @user.loginname %></td>
+		</tr>
+		<tr>
+			<td clase="label">
+				<b>nickname</b></td>
+			<td class="data">
+				<%= @user.nickname %></td>
+		</tr>
+		<tr>
+			<td clase="label">
+				<b>first_name</td>
+			<td class="data">
+				<%= @user.first_name %></td>
+		</tr>
+		<tr>
+			<td clase="label">
+				<b>last_name</td>
+			<td class="data">
+				<%= @user.last_name %></td>
+		</tr>
+		<tr>
+			<td clase="label">
+				<b>email</td>
+			<td class="data">
+				<%= @user.email %></td>
+		</tr>
+		<tr>
+			<td clase="label">
+				<b>mobile</td>
+			<td class="data">
+				<%= @user.mobile %></td>
+		</tr>
+	</table>
+	<%= link_to 'Edit', edit_user_path(@user) %> |
+	<%= link_to 'Back', users_path %>
+</fieldset>

@@ -1,0 +1,68 @@
+<fieldset>
+<legend>Create New User</legend>
+	<% form_for(@user, :url => { :action => "create" }, :html => { :multipart => true }) do |f| %>	
+	<table id="table-type-1">
+		<tr>
+			<td clase="label">
+				<b><%= f.label :loginname %></b></td>
+			<td class="input">
+				<%= f.text_field :loginname %></td>
+		</tr>
+		<tr>
+			<td clase="label">
+				<b><%= f.label :nickname %></b></td>
+			<td class="input">
+				<%= f.text_field :nickname %></td>
+		</tr>
+		<tr>
+			<td clase="label">
+				<b><%= f.label :image %></b></td>
+			<td class="input">
+				<%= f.file_field :image %></td>
+		</tr>
+		<tr>
+			<td clase="label">
+				<b><%= f.label :first_name %></b></td>
+			<td class="input">
+				<%= f.text_field :first_name %></td>
+		</tr>
+		<tr>
+			<td clase="label">
+				<b><%= f.label :last_name %></b></td>
+			<td class="input">
+				<%= f.text_field :last_name %></td>
+		</tr>
+		<tr>
+			<td clase="label">
+				<b><%= f.label :email %></b></td>
+			<td class="input">
+				<%= f.text_field :email %></td>
+		</tr>
+		<tr>
+			<td clase="label">
+				<b><%= f.label :mobile %></b></td>
+			<td class="input">
+				<%= f.text_field :mobile %></td>
+		</tr>
+		<tr>
+			<td clase="label">
+				<b><%= f.label :password %></b></td>
+			<td class="input">
+				<%= f.password_field :password, :size => 40 %></td>
+		</tr>
+		<tr>
+			<td clase="label">
+				<b><%= f.label :password_confirmation %></b></td>
+			<td class="input">
+				<%= f.password_field :password_confirmation, :size => 40 %></td>
+		</tr>
+	</table>
+	<% if flash[:notice] -%>
+		<div id="notice"><%= flash[:notice] %></div>
+	<% end -%>
+	<%= f.error_messages %>
+	<p>
+	<%= f.submit 'Create'%>
+	</p>
+	<% end %>
+</fieldset>

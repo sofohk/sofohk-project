@@ -1,0 +1,98 @@
+<p>
+	<div id="inbox-list">
+	<fieldset>
+		<legend>Inbox</legend>
+	  	<table id="inbox-table">
+		<% @inusermessages.each do |inusermessage| %>
+			<tr valign="top" class="<%= cycle('post-list-odd', 'post-list-even') %>">
+				<table id="message-content">
+					<tr>
+						<td rowspan="2">
+			  			<%= image_tag inusermessage.from_user.image.url(:tiny), :class => 'user-image', :size => "25x25" %>
+						</td>
+		      			<td>
+						<b><%= inusermessage.title %></b>
+						</td>
+					</tr>
+					<tr>
+						<td rowspan="2" valign="top">
+						<%= inusermessage.message %>
+						</td>
+					</tr>
+					<tr>
+		      			<td>
+						<b><%= inusermessage.from_user.nickname %></b>
+						</td>
+					</tr>
+				</table>
+			</tr>
+		<% end %>
+	  	</table>
+	</fieldset>
+	</div>
+	<div id="outbox-list">
+	<fieldset>
+		<legend>Outbox</legend>
+	  	<table cellpadding="5" cellspacing="0">
+		<% @outusermessages.each do |outusermessage| %>
+			<tr valign="top" class="<%= cycle('post-list-odd', 'post-list-even') %>">
+				<table id="message-content">
+					<tr>
+						<td rowspan="2">
+			  			<%= image_tag outusermessage.to_user.image.url(:tiny), :class => 'user-image', :size => "25x25" %>
+						</td>
+		      			<td>
+						<b><%= outusermessage.title %></b>
+						</td>
+					</tr>
+					<tr>
+						<td rowspan="2" valign="top">
+						<%= outusermessage.message %>
+						</td>
+					</tr>
+					<tr>
+		      			<td>
+						<b><%= outusermessage.to_user.nickname %></b>
+						</td>
+					</tr>
+				</table>
+			</tr>
+		<% end %>
+	  	</table>
+	</fieldset>
+	</div>
+	<div id="send-box">
+	<fieldset>
+		<legend>Send Box</legend>
+		<% form_for(@usermessage, :url => { :action => "send_message" }, :html => { :multipart => true }) do |f| %>	
+		<table>
+			<tr>
+				<td><b><%= f.label :to_user_name %></b>
+				</td>
+				<td><%= f.text_field :to_user_name %>
+				</td>
+			</tr>
+			<tr>
+				<td><b><%= f.label :title %></b>
+				</td>
+				<td><%= f.text_field :title %>
+				</td>
+			</tr>
+			<tr>
+				<td><b><%= f.label :message %></b>
+				</td>
+				<td><%= f.text_area :message %>
+				</td>
+			</tr>
+		</table>
+		<% if flash[:notice] -%>
+			<div id="notice"><%= flash[:notice] %></div>
+		<% end -%>
+		<%= f.error_messages %>
+		<p>
+		<%= f.submit 'Send' %>
+		</p>
+		<% end %>
+	</fieldset>
+	</div>
+</p>

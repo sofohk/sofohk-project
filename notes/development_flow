@@ -1,0 +1,18 @@
+1. Create Project
+rails --database mysql sofo
+
+2. Change Database Settings [database.yml]
+
+3. Add User Model & Controller
+ruby script/generate scaffold user
+
+4. Add Product Model
+ruby script/generate model product
+
+4. Add UserMessage
+ruby script/generate model usermessage
+
+4. Add Post
+ruby script/generate model post
+
+5. Copy plugin and vendor paperclip
