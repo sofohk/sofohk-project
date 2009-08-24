@@ -4,7 +4,7 @@ class AdminController < SofoController
     if request.post?
       user = User.authenticate(params[:loginname], params[:password])
       if user
-        session[:user_name] = user.name
+        session[:user_name] = user.loginname
         session[:user_id] = user.id
         uri = session[:original_uri]
         session[:original_uri] = nil

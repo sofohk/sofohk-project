@@ -1,5 +1,5 @@
 class SofoController < ApplicationController
-  before_filter :base_record
+  before_filter :save_orginal_uri
   
   def back
     uri = session[:original_uri]
@@ -8,7 +8,10 @@ class SofoController < ApplicationController
   end
   
 protected
-  def base_record
+  def save_orginal_uri
+    if not session[:original_uri]
+    session[:original_uri] = request.request_uri
+    end
   end
   
 end

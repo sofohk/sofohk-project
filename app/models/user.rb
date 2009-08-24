@@ -33,7 +33,7 @@ class User < ActiveRecord::Base
   end
   
   def current_password=(pwd)
-    return if User.authenticate(self.name, pwd)
+    return if User.authenticate(self.loginname, pwd)
   end
   
   # 'password' is a virtual attribute

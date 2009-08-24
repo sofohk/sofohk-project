@@ -19,18 +19,25 @@
 		<li><%= link_to 'Password', :controller => :user, :action => :password %></li>
 	</ul>
 </div>
-<div id="MainNav">Logo</div>
+<div id="MainNav">
+	<ul id="list">
+		<li class="item">Logo</li>
+		<li class="item"><%= link_to 'Home', :controller => :home, :action => :index %></li>
+		<li class="item"><%= link_to 'Explore', :controller => :home, :action => 'Explore' %></li>
+		<li class="item"><%= link_to 'Create', :controller => :home, :action => 'Create' %></li>
+		<li class="item"><%= link_to 'Popular', :controller => :home, :action => 'Popular' %></li>
+	</ul>
+</div>
 <div id="SecNav">
 	<ul id="list">
 		<% if session[:user_name] %>
 			<li class="item">Hi, <%= session[:user_name]%></li>
-			<li class="item"><%= link_to 'Home', :controller => :board, :action => :index %></li>
 			<li class="item"><%= link_to 'Logout', :controller => :admin, :action => :logout %></li>
 		<% else %>
-			<li class="item"><%= link_to 'Home', :controller => :board, :action => :index %></li>
+			<li class="item"><%= link_to 'Register', :controller => :admin, :action => 'newuser' %></li>
 			<li class="item"><%= link_to 'Login', :controller => :admin, :action => 'login' %></li>
 		<% end %>
-		<li class="item"><%= link_to 'Contact Us', :action => :index %></li>
+		<li class="item"><%= link_to 'Help', :controller => :home, :action => 'help' %></li>
 	</ul>
 </div>
 <div id="FooterNav">
