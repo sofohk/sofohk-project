@@ -1,4 +1,4 @@
-class UsersController < AuthorizedController
+class UsersController < SofoController
   # GET /users
   # GET /users.xml
   def index

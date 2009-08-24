@@ -1178,3 +1178,47 @@ Completed in 94ms (DB: 15) | 302 Found [http://localhost/admin/login]
 Processing AdminController#login (for 127.0.0.1 at 2009-08-24 14:42:50) [GET]
 Rendering admin/login
 Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/admin/login]
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (297.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2009-08-24 20:32:37) [GET]
+Rendering admin/login
+Completed in 906ms (View: 78, DB: 1313) | 200 OK [http://localhost/admin/login]
+  [4;36;1mSQL (313.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (312.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2009-08-24 20:32:53) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"CsOVzmrl0I648gVRj1LU278LnGbhDaoj21UMj2G8fiM=", "loginname"=>"nickto", "password"=>"Abcd1234"}
+  [4;36;1mUser Columns (406.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (297.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`loginname` = 'nickto') LIMIT 1[0m
+Redirected to http://localhost:3000/admin/login
+Completed in 1218ms (DB: 1703) | 302 Found [http://localhost/admin/login]
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (313.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2009-08-24 20:32:57) [GET]
+Rendering admin/login
+Completed in 312ms (View: 15, DB: 907) | 200 OK [http://localhost/admin/login]
+  [4;36;1mSQL (313.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (312.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-08-24 20:33:35) [GET]
+
+ActionController::RoutingError (No route matches "/ausers" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (406.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-08-24 20:33:39) [GET]
+  [4;36;1mUser Load (328.0ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering template within layouts/users
+Rendering users/index
+  [4;35;1mUser Columns (313.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 1313ms (View: 203, DB: 1719) | 200 OK [http://localhost/users]

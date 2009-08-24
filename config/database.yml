@@ -21,8 +21,10 @@ development:
   database: sofo
   pool: 5
   username: root
-  password: Abcd1234
-  host: localhost
+#  password: Abcd1234
+#  host: localhost
+  password: iloveiphone123
+  host: www.newmediapower.com
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
