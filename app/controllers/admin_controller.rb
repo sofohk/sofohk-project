@@ -1,16 +1,16 @@
-class AdminController < SofoController
+class AdminController < ApplicationController
   def login
     clear_session
     if request.post?
       user = User.authenticate(params[:loginname], params[:password])
       if user
-        session[:user_name] = user.loginname
+        session[:user_loginname] = user.loginname
         session[:user_id] = user.id
         uri = session[:original_uri]
         session[:original_uri] = nil
         redirect_to(uri || { :action => "index" })
       else
-        flash.now[:notice] = "Invalid user/password combination"
+        flash[:notice] = "Invalid user/password combination"
       end
     else
       #flash.now[:notice] = session[:original_uri]
@@ -18,8 +18,32 @@ class AdminController < SofoController
   end
 
   def logout
-    session[:user_name] = nil
-    redirect_to(:controller => "board", :action => "index" )
+    clear_session
+    redirect_to(:controller => "home", :action => "index" )
+  end
+  
+  def register
+    @user = User.new
+
+    respond_to do |format|
+      format.html # new.html.erb
+      format.xml  { render :xml => @user }
+    end
+  end
+  
+  def create
+    @user = User.new(params[:user])
+
+    respond_to do |format|
+      if @user.save
+        flash[:notice] = 'User was successfully created.'
+        format.html { redirect_to(:controller => "home", :action => "index") }
+        format.xml  { render :xml => @user, :status => :created, :location => @user }
+      else
+        format.html { render :action => "register" }
+        format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
+      end
+    end
   end
   
 private 

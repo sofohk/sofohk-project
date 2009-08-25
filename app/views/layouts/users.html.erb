@@ -30,11 +30,11 @@
 </div>
 <div id="SecNav">
 	<ul id="list">
-		<% if session[:user_name] %>
-			<li class="item">Hi, <%= session[:user_name]%></li>
+		<% if session[:user_loginname] %>
+			<li class="item">Hi, <%= link_to session[:user_loginname], :controller => :users, :action => :show, :id => session[:user_id] %></li>
 			<li class="item"><%= link_to 'Logout', :controller => :admin, :action => :logout %></li>
 		<% else %>
-			<li class="item"><%= link_to 'Register', :controller => :admin, :action => 'newuser' %></li>
+			<li class="item"><%= link_to 'Register', :controller => :admin, :action => 'register' %></li>
 			<li class="item"><%= link_to 'Login', :controller => :admin, :action => 'login' %></li>
 		<% end %>
 		<li class="item"><%= link_to 'Help', :controller => :home, :action => 'help' %></li>
