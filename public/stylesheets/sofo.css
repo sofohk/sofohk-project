@@ -14,8 +14,8 @@ html, body {
 
 .full_width .page {
     margin: 0 auto;
-    padding-left: 2.2em;
-    padding-right: 2.2em;
+    padding-left: 1.2em;
+    padding-right: 1.2em;
 	/* width:102.9em; */
 }
 
@@ -54,17 +54,9 @@ body {
     text-align: left;
 }
 
-#header_area {
+#header_area, #content_area, #footer_area {
     margin: 0 auto; /* Make the page in center of browser */
     width: 1000px;
-}
-
-#content_area {
-    margin: 0 auto; /* Make the page in center of browser */
-    width: 1000px;
-}
-
-#footer_area {
 }
 
 #logo {
@@ -85,6 +77,18 @@ body {
 #user_menu{
 	float: right;
 	position:relative;
+	vertical-align: top;
+}
+
+#footer_menu {
+	text-size: 80%;
+}
+
+#footer_menu ul li{
+	list-style-type: none;
+	padding: 0 6px;
+	display: inline;
+	
 }
 
 ul#tabs {
@@ -110,21 +114,36 @@ ul#tabs li a{
 	display: block;
 }
 
+ul#tabs li a:hover {
+	text-decoration: underline;
+}
+
 ul#tabs li.current_page_item{
 	border-bottom: 0 none;
 	padding-bottom: 0.1em;
 }
 
-/* Added by Nick */
-
-a {
-    color: #2F637A;
-    background: inherit;
+#content {
+	float: left;
+	width: 660px;
 }
 
-a:hover {
+#sidebars {
+	float: right;
+	width: 300px;
+}
+/* Added by Nick */
+
+a, a:visited {
+    color: #2F637A;
+	background: inherit;
+	text-decoration: none;
+}
+
+a:hover, a:active {
     color: #808080;
-    background: inherit;
+	background: inherit;
+    text-decoration: underline;
 }
 
 p {
@@ -159,11 +178,6 @@ ul {
 
 img {
     border: 0;
-}
-
-#body {
-    margin: 10px auto;
-    width: 960px;
 }
 
 /* MainNav */
@@ -209,11 +223,11 @@ main_menu ul#list li {
 
 /* End: FooterNav */
 /* MenuNav */
-div#MenuNav {
+/*div#MenuNav {
     position: absolute;
     left: 500px;
     top: 100px;
-}
+}*/
 
 div#MenuNav ul#list li {
     list-style: none;
