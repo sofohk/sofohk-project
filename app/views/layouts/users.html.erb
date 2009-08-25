@@ -1,51 +1,91 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang=zh-hk" lang="zh-hk">
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+        <title>掃貨 Sofo.hk | 香港購物資料分享網 Hong Kong Shopping Info Sharing</title>
+        <%= stylesheet_link_tag 'scaffold' %>
+        <%= stylesheet_link_tag 'sofo' %>
+    </head>
+    <body>
+        <div id="header_area" class="full_width">
+            <div id="page">
+            	<div id="logo">掃貨 Sofo.hk</div>
+                <div id="main_menu">
+                    <ul id="tabs">
+                        <li class="current_page_item">
+                            <%= link_to 'Home', :controller => :home, :action => :index %>
+                        </li>
+                        <li class="item">
+                            <%= link_to 'Explore', :controller => :home, :action => 'Explore' %>
+                        </li>
+                        <li class="item">
+                            <%= link_to 'Create', :controller => :home, :action => 'Create' %>
+                        </li>
+                        <li class="item">
+                            <%= link_to 'Popular', :controller => :home, :action => 'Popular' %>
+                        </li>
+                    </ul>
+                </div>
+                <div id="header">
+                    This is header. 這是標題部份。
+                </div>
+				        <div id="user_menu">
+            <ul id="list">
+                <% if session[:user_name] %>
+                <li class="item">
+                    Hi, <%= session[:user_name] %>
+                </li>
+                <li class="item">
+                    <%= link_to 'Logout', :controller => :admin, :action => :logout %>
+                </li>
+                <% else %>
+                <li class="item">
+                    <%= link_to 'Register', :controller => :admin, :action => 'newuser' %>
+                </li>
+                <li class="item">
+                    <%= link_to 'Login', :controller => :admin, :action => 'login' %>
+                </li>
+                <% end %>
+                <li class="item">
+                    <%= link_to 'Help', :controller => :home, :action => 'help' %>
+                </li>
+            </ul>
+        </div>
+            </div>
+        </div>
+        <div id="content_area" class="full_width">
+            <%= yield %>
+        </div>
+        <div id="MenuNav">
+            <ul id="list">
+                <li>
+                    <%= link_to 'Profile', :controller => :user, :action => :detail %>
+                </li>
+                <li>
+                    <%= link_to 'Message', :controller => :user, :action => :message %>
+                </li>
+                <li>
+                    <%= link_to 'Password', :controller => :user, :action => :password %>
+                </li>
+            </ul>
+        </div>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-  <title>Sofor</title>
-  <%= stylesheet_link_tag 'scaffold' %>
-  <%= stylesheet_link_tag 'sofo' %>
-</head>
-<body id="user">
-
-<div id="MainContent">
-<%= yield %>
-</div>
-<div id="MenuNav">
-	<ul id="list">
-		<li><%= link_to 'Profile', :controller => :user, :action => :detail %></li>
-		<li><%= link_to 'Message', :controller => :user, :action => :message %></li>
-		<li><%= link_to 'Password', :controller => :user, :action => :password %></li>
-	</ul>
-</div>
-<div id="MainNav">
-	<ul id="list">
-		<li class="item">Logo</li>
-		<li class="item"><%= link_to 'Home', :controller => :home, :action => :index %></li>
-		<li class="item"><%= link_to 'Explore', :controller => :home, :action => 'Explore' %></li>
-		<li class="item"><%= link_to 'Create', :controller => :home, :action => 'Create' %></li>
-		<li class="item"><%= link_to 'Popular', :controller => :home, :action => 'Popular' %></li>
-	</ul>
-</div>
-<div id="SecNav">
-	<ul id="list">
-		<% if session[:user_loginname] %>
-			<li class="item">Hi, <%= link_to session[:user_loginname], :controller => :users, :action => :show, :id => session[:user_id] %></li>
-			<li class="item"><%= link_to 'Logout', :controller => :admin, :action => :logout %></li>
-		<% else %>
-			<li class="item"><%= link_to 'Register', :controller => :admin, :action => 'register' %></li>
-			<li class="item"><%= link_to 'Login', :controller => :admin, :action => 'login' %></li>
-		<% end %>
-		<li class="item"><%= link_to 'Help', :controller => :home, :action => 'help' %></li>
-	</ul>
-</div>
-<div id="FooterNav">
-	<ul id="list">
-		<li><%= link_to 'About Sofo', :controller => :user, :action => :index %></li>
-		<li><%= link_to 'Privacy Policy', :controller => :user, :action => :index %></li>
-		<li><%= link_to 'Contact Us', :controller => :user, :action => :index %></li>
-	</ul>
-</div>
-</body>
+        <div id="footer_area" class="full_width">
+            <div id="page">
+                <div id="footer">
+                    <ul id="list">
+                        <li>
+                            <%= link_to 'About Sofo', :controller => :user, :action => :index %>
+                        </li>
+                        <li>
+                            <%= link_to 'Privacy Policy', :controller => :user, :action => :index %>
+                        </li>
+                        <li>
+                            <%= link_to 'Contact Us', :controller => :user, :action => :index %>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
