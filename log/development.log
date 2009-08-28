@@ -3557,3 +3557,64 @@ Rendering home/product_posts
   [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
   [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
 Completed in 2891ms (View: 516, DB: 2859) | 200 OK [http://localhost/home/product_posts/7]
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (281.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-08-28 20:59:00) [GET]
+  [4;36;1mTag Load (0.0ms)[0m   [0;1mMysql::Error: Column 'click_count' in order clause is ambiguous: SELECT tags.id, tags.name, COUNT(*) AS count FROM `tags` INNER JOIN taggings ON tags.id = taggings.tag_id INNER JOIN products ON products.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Product') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0 ORDER BY click_count LIMIT 2[0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: Column 'click_count' in order clause is ambiguous: SELECT tags.id, tags.name, COUNT(*) AS count FROM `tags`  INNER JOIN taggings ON tags.id = taggings.tag_id INNER JOIN products ON products.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Product')  GROUP BY tags.id, tags.name HAVING COUNT(*) > 0 ORDER BY click_count LIMIT 2):
+  app/controllers/home_controller.rb:3:in `index'
+
+Rendered rescues/_trace (266.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (312.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-08-28 21:00:34) [GET]
+  [4;35;1mTag Load (453.0ms)[0m   [0mSELECT tags.id, tags.name, COUNT(*) AS count FROM `tags` INNER JOIN taggings ON tags.id = taggings.tag_id INNER JOIN products ON products.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Product') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0 ORDER BY tags.click_count LIMIT 2[0m
+Rendering template within layouts/home
+Rendering home/index
+  [4;36;1mTag Columns (328.0ms)[0m   [0;1mSHOW FIELDS FROM `tags`[0m
+Completed in 1797ms (View: 267, DB: 2092) | 200 OK [http://localhost/home]
+  [4;35;1mSQL (313.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-08-28 21:06:16) [GET]
+  [4;35;1mTag Load (454.0ms)[0m   [0mSELECT tags.id, tags.name, COUNT(*) AS count FROM `tags` INNER JOIN taggings ON tags.id = taggings.tag_id INNER JOIN products ON products.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Product') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0 ORDER BY tags.click_count DESC LIMIT 20[0m
+  [4;36;1mProduct Load (406.0ms)[0m   [0;1mSELECT * FROM `products` ORDER BY click_count DESC LIMIT 20[0m
+Rendering template within layouts/home
+Rendering home/index
+  [4;35;1mProduct Columns (391.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+
+ActionView::TemplateError (undefined method `name' for #<Product:0x39febbc>) on line #14 of app/views/home/index.html.erb:
+11: 	<fieldset>
+12: 		<legend>Hot Product List</legend>
+13: 		<% @Products.each do |product| %>
+14: 			<%= link_to product.name, { :action => :product_posts, :id => product.id } %>
+15: 		<% end %>
+16: 	</fieldset>
+17: </div>
+
+    app/views/home/index.html.erb:14
+    app/views/home/index.html.erb:13:in `each'
+    app/views/home/index.html.erb:13
+
+Rendered rescues/_trace (406.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (312.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (313.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-08-28 21:06:44) [GET]
+  [4;36;1mTag Load (328.0ms)[0m   [0;1mSELECT tags.id, tags.name, COUNT(*) AS count FROM `tags` INNER JOIN taggings ON tags.id = taggings.tag_id INNER JOIN products ON products.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Product') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0 ORDER BY tags.click_count DESC LIMIT 20[0m
+  [4;35;1mProduct Load (406.0ms)[0m   [0mSELECT * FROM `products` ORDER BY click_count DESC LIMIT 20[0m
+Rendering template within layouts/home
+Rendering home/index
+  [4;36;1mProduct Columns (328.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 1687ms (View: 266, DB: 2015) | 200 OK [http://localhost/home]

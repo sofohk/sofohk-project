@@ -1,10 +1,11 @@
 class HomeController < SofoController
   def index
-    @tags = Product.tag_counts
+    @tags = Product.tag_counts(:order => 'tags.click_count DESC', :limit => 20)
+    @Products = Product.find(:all, :order => 'click_count DESC', :limit => 20)
   end
   
   def tag_products
-    @tag = Tag.find_by_name(params[:tag_name])
+    @tag = Tag.find_by_id(params[:id])
     @tag.click_count = @tag.click_count + 1
     @tag.save
     @products = Product.find_tagged_with(params[:tag_name])
@@ -13,6 +14,7 @@ class HomeController < SofoController
   def product_posts
     session[:original_uri] = request.request_uri
     product = Product.find(params[:id])
+    product.click_count = product.click_count + 1
     @product = product
     @post = Post.new
     @post.product_id = @product.id

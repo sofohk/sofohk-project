@@ -1,3 +1,17 @@
-<% @tags.each do |tag| %>
-	<%= link_to tag.name, { :action => :tag_products, :tag_name => tag.name } %>
-<% end %>
+
+<div>
+	<fieldset>
+		<legend>Hot Tag List</legend>
+		<% @tags.each do |tag| %>
+			<%= link_to tag.name, { :action => :tag_products, :id => tag.id } %>
+		<% end %>
+	</fieldset>
+</div>
+<div>
+	<fieldset>
+		<legend>Hot Product List</legend>
+		<% @Products.each do |product| %>
+			<%= link_to product.product_name, { :action => :product_posts, :id => product.id } %>
+		<% end %>
+	</fieldset>
+</div>
