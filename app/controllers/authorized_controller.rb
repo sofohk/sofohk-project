@@ -4,8 +4,8 @@ class AuthorizedController < SofoController
   
 protected
   def authorize
-    session[:original_uri] = request.request_uri
     unless User.find_by_loginname(session[:user_loginname])
+      session[:original_uri] = request.request_uri
       redirect_to :controller => :admin, :action => :login
     end
   end

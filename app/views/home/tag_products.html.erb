@@ -1,0 +1,20 @@
+<p>
+  <div class="tag-title">
+  	<h2><%=h @tag.name %></h2>
+  </div>
+  <div id="product-list">
+	<table cellpadding="5" cellspacing="0">
+	<% for product in @products %>
+	  <tr valign="top" class="<%= cycle('product-list-odd', 'product-list-even') %>">
+	    <td>
+		  <%= image_tag product.image.url(:thumb), :class => 'product-small-image' %>
+		</td>
+	    <td>
+		  <span class="product-name"><%= link_to product.product_name, :action => :product_posts, :id => product %></span><br />
+ 		  <%=h truncate(product.description.gsub(/<.*?>/,''), 80) %>
+	    </td>
+	  </tr>
+	<% end %>
+	</table>
+  </div>
+</p>

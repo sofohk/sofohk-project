@@ -1,4 +1,6 @@
 class Product < ActiveRecord::Base
+  acts_as_taggable
+  
   has_many :posts
   has_attached_file :image,  
     :styles => {:tiny => '30x30>', :thumb => '75x75>', :large => '150x150>' },  

@@ -6,7 +6,7 @@ class SofoController < ApplicationController
   
 protected
   def save_original_uri
-    session[:original_uri] = request.request_uri
+    #session[:original_uri] = request.request_uri
   end
   
 end

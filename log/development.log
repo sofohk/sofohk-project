@@ -1840,3 +1840,1720 @@ Processing HomeController#index (for 127.0.0.1 at 2009-08-26 01:01:33) [GET]
 Rendering template within layouts/home
 Rendering home/index
 Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/home]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-08-26 01:18:04) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://localhost/home]
+  [4;36;1mSQL (47.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (31.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to ActsAsTaggableMigration (20090826170511)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mMysql::Error: Table 'tags' already exists: CREATE TABLE `tags` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to ActsAsTaggableMigration (20090826170511)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mMysql::Error: Table 'tags' already exists: CREATE TABLE `tags` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (312.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (296.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (313.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to ActsAsTaggableMigration (20090826170511)
+  [4;36;1mSQL (672.0ms)[0m   [0;1mCREATE TABLE `tags` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (312.0ms)[0m   [0mCREATE TABLE `taggings` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `tag_id` int(11), `taggable_id` int(11), `taggable_type` varchar(255), `created_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (703.0ms)[0m   [0;1mCREATE INDEX `index_taggings_on_tag_id` ON `taggings` (`tag_id`)[0m
+  [4;35;1mSQL (406.0ms)[0m   [0mCREATE INDEX `index_taggings_on_taggable_id_and_taggable_type` ON `taggings` (`taggable_id`, `taggable_type`)[0m
+  [4;36;1mSQL (297.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090826170511')[0m
+  [4;35;1mSQL (281.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (312.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+  [4;35;1mSQL (406.0ms)[0m   [0mdescribe `posts`[0m
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSHOW KEYS FROM `posts`[0m
+  [4;35;1mSQL (406.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mSQL (297.0ms)[0m   [0;1mdescribe `products`[0m
+  [4;35;1mSQL (297.0ms)[0m   [0mSHOW KEYS FROM `products`[0m
+  [4;36;1mSQL (313.0ms)[0m   [0;1mSHOW FIELDS FROM `sessions`[0m
+  [4;35;1mSQL (297.0ms)[0m   [0mdescribe `sessions`[0m
+  [4;36;1mSQL (312.0ms)[0m   [0;1mSHOW KEYS FROM `sessions`[0m
+  [4;35;1mSQL (313.0ms)[0m   [0mSHOW FIELDS FROM `taggings`[0m
+  [4;36;1mSQL (296.0ms)[0m   [0;1mdescribe `taggings`[0m
+  [4;35;1mSQL (313.0ms)[0m   [0mSHOW KEYS FROM `taggings`[0m
+  [4;36;1mSQL (312.0ms)[0m   [0;1mSHOW FIELDS FROM `tags`[0m
+  [4;35;1mSQL (407.0ms)[0m   [0mdescribe `tags`[0m
+  [4;36;1mSQL (406.0ms)[0m   [0;1mSHOW KEYS FROM `tags`[0m
+  [4;35;1mSQL (312.0ms)[0m   [0mSHOW FIELDS FROM `usermessages`[0m
+  [4;36;1mSQL (297.0ms)[0m   [0;1mdescribe `usermessages`[0m
+  [4;35;1mSQL (297.0ms)[0m   [0mSHOW KEYS FROM `usermessages`[0m
+  [4;36;1mSQL (312.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (297.0ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (313.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (360.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-08-27 21:57:42) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 2094ms (View: 188, DB: 2423) | 200 OK [http://localhost/home]
+  [4;36;1mSQL (312.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (297.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2009-08-27 21:58:23) [GET]
+
+RuntimeError (acts_as_taggable_on_steroids has been moved to github: http://github.com/jviney/acts_as_taggable_on_steroids):
+  app/models/product.rb:2
+  app/controllers/products_controller.rb:27:in `new'
+
+Rendered rescues/_trace (360.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (313.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (312.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2009-08-27 22:13:10) [GET]
+
+RuntimeError (acts_as_taggable_on_steroids has been moved to github: http://github.com/jviney/acts_as_taggable_on_steroids):
+  app/models/product.rb:2
+  app/controllers/products_controller.rb:27:in `new'
+
+Rendered rescues/_trace (281.0ms)
+Rendered rescues/_request_and_response (16.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (313.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (312.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2009-08-27 22:38:51) [GET]
+  [4;36;1mProduct Columns (328.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Rendering products/new
+
+ActionView::TemplateError (undefined method `products_path' for #<ActionView::Base:0x3ae69f8>) on line #3 of app/views/products/new.html.erb:
+1: <h1>New product</h1>
+2: 
+3: <% form_for(@product, :html => { :multipart => true }) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/products/new.html.erb:3
+    app/controllers/products_controller.rb:29:in `new'
+
+Rendered rescues/_trace (422.0ms)
+Rendered rescues/_request_and_response (16.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (297.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (313.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2009-08-27 22:39:33) [GET]
+  [4;35;1mProduct Columns (390.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Rendering products/new
+
+ActionView::TemplateError (undefined method `products_path' for #<ActionView::Base:0x3a99220>) on line #3 of app/views/products/new.html.erb:
+1: <h1>New product</h1>
+2: 
+3: <% form_for(@product, :html => { :multipart => true }) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/products/new.html.erb:3
+    app/controllers/products_controller.rb:29:in `new'
+
+Rendered rescues/_trace (359.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (313.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (312.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2009-08-27 22:41:24) [GET]
+  [4;36;1mProduct Columns (266.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Rendering products/new
+
+ActionView::TemplateError (undefined method `products_path' for #<ActionView::Base:0x34fc2a4>) on line #3 of app/views/products/new.html.erb:
+1: <h1>New product</h1>
+2: 
+3: <% form_for(@product, :html => { :multipart => true }) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/products/new.html.erb:3
+    app/controllers/products_controller.rb:29:in `new'
+
+Rendered rescues/_trace (313.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (297.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (312.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2009-08-27 22:42:06) [GET]
+  [4;35;1mProduct Columns (484.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Rendering products/new
+
+ActionView::TemplateError (undefined method `products_path' for #<ActionView::Base:0x35fabb0>) on line #3 of app/views/products/new.html.erb:
+1: <h1>New product</h1>
+2: 
+3: <% form_for(@product, :html => { :multipart => true }) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/products/new.html.erb:3
+
+Rendered rescues/_trace (312.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (422.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (406.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2009-08-27 22:44:07) [GET]
+  [4;36;1mProduct Columns (2203.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Rendering products/new
+Completed in 3687ms (View: 78, DB: 4390) | 200 OK [http://localhost/products/new]
+  [4;35;1mSQL (313.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2009-08-27 22:45:43) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"CsOVzmrl0I648gVRj1LU278LnGbhDaoj21UMj2G8fiM=", "product"=>{"tags"=>"史迪仔, 籃色, 公仔", "description"=>"得意既史迪仔", "image"=>#<File:C:/DOCUME~1/NICKTO~1/LOCALS~1/Temp/RackMultipart.1196.1>, "product_name"=>"史迪仔"}}
+  [4;35;1mProduct Columns (1500.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+
+NoMethodError (undefined method `tag_list=' for #<Product:0x3af082c>):
+  app/controllers/products_controller.rb:40:in `create'
+
+Rendered rescues/_trace (250.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (312.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2009-08-27 22:50:34) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"CsOVzmrl0I648gVRj1LU278LnGbhDaoj21UMj2G8fiM=", "product"=>{"tags"=>"史迪仔, 籃色, 公仔", "description"=>"得意既史迪仔", "image"=>#<File:C:/DOCUME~1/NICKTO~1/LOCALS~1/Temp/RackMultipart.1196.3>, "product_name"=>"史迪仔"}}
+  [4;36;1mProduct Columns (500.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+
+NoMethodError (undefined method `stringify_keys!' for "史迪仔, 籃色, 公仔":String):
+  app/controllers/products_controller.rb:40:in `new'
+  app/controllers/products_controller.rb:40:in `create'
+
+Rendered rescues/_trace (547.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (297.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2009-08-27 22:52:47) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"CsOVzmrl0I648gVRj1LU278LnGbhDaoj21UMj2G8fiM=", "product"=>{"tags"=>"史迪仔, 籃色, 公仔", "description"=>"得意既史迪仔", "image"=>#<File:C:/DOCUME~1/NICKTO~1/LOCALS~1/Temp/RackMultipart.1196.4>, "product_name"=>"史迪仔"}}
+  [4;35;1mProduct Columns (594.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+
+NoMethodError (undefined method `stringify_keys!' for "史迪仔, 籃色, 公仔":String):
+  app/controllers/products_controller.rb:40:in `new'
+  app/controllers/products_controller.rb:40:in `create'
+
+Rendered rescues/_trace (250.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (313.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (297.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2009-08-27 22:57:51) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"CsOVzmrl0I648gVRj1LU278LnGbhDaoj21UMj2G8fiM=", "product"=>{"tags"=>"史迪仔, 籃色, 公仔", "description"=>"得意既史迪仔", "image"=>#<File:C:/DOCUME~1/NICKTO~1/LOCALS~1/Temp/RackMultipart.1196.6>, "product_name"=>"史迪仔"}}
+  [4;36;1mProduct Columns (515.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mSQL (250.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mProduct Create (516.0ms)[0m   [0;1mINSERT INTO `products` (`image_file_size`, `updated_at`, `tags`, `image_content_type`, `description`, `product_name`, `image_updated_at`, `created_at`, `image_file_name`) VALUES(109961, '2009-08-27 14:57:59', NULL, 'image/jpeg', '得意既史迪仔', '史迪仔', '2009-08-27 14:57:53', '2009-08-27 14:57:59', 'stitch-christmas.jpg')[0m
+[paperclip] Saving attachments.
+[paperclip] saving C:/Development/sofo/public/system/products/images/1/tiny/stitch-christmas.jpg
+[paperclip] saving C:/Development/sofo/public/system/products/images/1/thumb/stitch-christmas.jpg
+[paperclip] saving C:/Development/sofo/public/system/products/images/1/large/stitch-christmas.jpg
+[paperclip] saving C:/Development/sofo/public/system/products/images/1/original/stitch-christmas.jpg
+  [4;35;1mSQL (421.0ms)[0m   [0mCOMMIT[0m
+
+NoMethodError (undefined method `tag_list=' for #<Product:0x3b16fe0>):
+  app/controllers/products_controller.rb:46:in `create'
+  app/controllers/products_controller.rb:44:in `create'
+
+Rendered rescues/_trace (282.0ms)
+Rendered rescues/_request_and_response (15.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (313.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (406.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2009-08-27 22:59:52) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"CsOVzmrl0I648gVRj1LU278LnGbhDaoj21UMj2G8fiM=", "product"=>{"tags"=>"史迪仔, 籃色, 公仔", "description"=>"得意既史迪仔", "image"=>#<File:C:/DOCUME~1/NICKTO~1/LOCALS~1/Temp/RackMultipart.1196.1>, "product_name"=>"史迪仔"}}
+  [4;36;1mProduct Columns (281.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mSQL (266.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mProduct Create (234.0ms)[0m   [0;1mINSERT INTO `products` (`image_file_size`, `updated_at`, `tags`, `image_content_type`, `description`, `product_name`, `image_updated_at`, `created_at`, `image_file_name`) VALUES(109961, '2009-08-27 15:00:00', NULL, 'image/jpeg', '得意既史迪仔', '史迪仔', '2009-08-27 14:59:53', '2009-08-27 15:00:00', 'stitch-christmas.jpg')[0m
+[paperclip] Saving attachments.
+[paperclip] saving C:/Development/sofo/public/system/products/images/2/tiny/stitch-christmas.jpg
+[paperclip] saving C:/Development/sofo/public/system/products/images/2/thumb/stitch-christmas.jpg
+[paperclip] saving C:/Development/sofo/public/system/products/images/2/large/stitch-christmas.jpg
+[paperclip] saving C:/Development/sofo/public/system/products/images/2/original/stitch-christmas.jpg
+  [4;35;1mSQL (328.0ms)[0m   [0mCOMMIT[0m
+
+NoMethodError (undefined method `tag_list' for #<Product:0x359e8b0>):
+  app/controllers/products_controller.rb:46:in `create'
+  app/controllers/products_controller.rb:44:in `create'
+
+Rendered rescues/_trace (391.0ms)
+Rendered rescues/_request_and_response (15.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (296.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (313.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2009-08-27 23:04:15) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"CsOVzmrl0I648gVRj1LU278LnGbhDaoj21UMj2G8fiM=", "product"=>{"tags"=>"史迪仔, 籃色, 公仔", "description"=>"得意既史迪仔", "image"=>#<File:C:/DOCUME~1/NICKTO~1/LOCALS~1/Temp/RackMultipart.1196.3>, "product_name"=>"史迪仔"}}
+  [4;36;1mProduct Columns (344.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mSQL (297.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mProduct Create (313.0ms)[0m   [0;1mINSERT INTO `products` (`image_file_size`, `updated_at`, `tags`, `image_content_type`, `description`, `product_name`, `image_updated_at`, `created_at`, `image_file_name`) VALUES(109961, '2009-08-27 15:04:22', NULL, 'image/jpeg', '得意既史迪仔', '史迪仔', '2009-08-27 15:04:15', '2009-08-27 15:04:22', 'stitch-christmas.jpg')[0m
+[paperclip] Saving attachments.
+[paperclip] saving C:/Development/sofo/public/system/products/images/3/tiny/stitch-christmas.jpg
+[paperclip] saving C:/Development/sofo/public/system/products/images/3/thumb/stitch-christmas.jpg
+[paperclip] saving C:/Development/sofo/public/system/products/images/3/large/stitch-christmas.jpg
+[paperclip] saving C:/Development/sofo/public/system/products/images/3/original/stitch-christmas.jpg
+  [4;35;1mSQL (266.0ms)[0m   [0mCOMMIT[0m
+
+NoMethodError (undefined method `tag_list' for #<Product:0x386b4bc>):
+  app/controllers/products_controller.rb:46:in `create'
+  app/controllers/products_controller.rb:44:in `create'
+
+Rendered rescues/_trace (734.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (312.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (297.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2009-08-27 23:08:57) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"CsOVzmrl0I648gVRj1LU278LnGbhDaoj21UMj2G8fiM=", "product"=>{"tags"=>"史迪仔, 籃色, 公仔", "description"=>"得意既史迪仔", "image"=>#<File:C:/DOCUME~1/NICKTO~1/LOCALS~1/Temp/RackMultipart.3164.1>, "product_name"=>"史迪仔"}}
+  [4;36;1mProduct Columns (343.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mSQL (281.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mProduct Create (359.0ms)[0m   [0;1mINSERT INTO `products` (`image_file_size`, `updated_at`, `tags`, `image_content_type`, `description`, `product_name`, `image_updated_at`, `created_at`, `image_file_name`) VALUES(109961, '2009-08-27 15:09:06', NULL, 'image/jpeg', '得意既史迪仔', '史迪仔', '2009-08-27 15:08:59', '2009-08-27 15:09:06', 'stitch-christmas.jpg')[0m
+[paperclip] Saving attachments.
+[paperclip] saving C:/Development/sofo/public/system/products/images/4/thumb/stitch-christmas.jpg
+[paperclip] saving C:/Development/sofo/public/system/products/images/4/large/stitch-christmas.jpg
+[paperclip] saving C:/Development/sofo/public/system/products/images/4/tiny/stitch-christmas.jpg
+[paperclip] saving C:/Development/sofo/public/system/products/images/4/original/stitch-christmas.jpg
+  [4;35;1mSQL (312.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mTagging Columns (328.0ms)[0m   [0;1mSHOW FIELDS FROM `taggings`[0m
+  [4;35;1mTag Load (375.0ms)[0m   [0mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.id = `taggings`.tag_id WHERE ((`taggings`.taggable_type = 'Product') AND (`taggings`.taggable_id = 4)) [0m
+
+NoMethodError (undefined method `save' for ["史迪仔, 籃色, 公仔"]:TagList):
+  app/controllers/products_controller.rb:47:in `create'
+  app/controllers/products_controller.rb:44:in `create'
+
+Rendered rescues/_trace (469.0ms)
+Rendered rescues/_request_and_response (16.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (250.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (359.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2009-08-27 23:11:19) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"CsOVzmrl0I648gVRj1LU278LnGbhDaoj21UMj2G8fiM=", "product"=>{"tags"=>"史迪仔, 籃色, 公仔", "description"=>"得意既史迪仔", "image"=>#<File:C:/DOCUME~1/NICKTO~1/LOCALS~1/Temp/RackMultipart.3164.3>, "product_name"=>"史迪仔"}}
+  [4;36;1mProduct Columns (282.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mSQL (281.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mProduct Create (297.0ms)[0m   [0;1mINSERT INTO `products` (`image_file_size`, `updated_at`, `tags`, `image_content_type`, `description`, `product_name`, `image_updated_at`, `created_at`, `image_file_name`) VALUES(109961, '2009-08-27 15:11:26', NULL, 'image/jpeg', '得意既史迪仔', '史迪仔', '2009-08-27 15:11:19', '2009-08-27 15:11:26', 'stitch-christmas.jpg')[0m
+  [4;35;1mTag Load (297.0ms)[0m   [0mSELECT * FROM `tags` WHERE (name LIKE '史迪仔, 籃色, 公仔') LIMIT 1[0m
+  [4;36;1mTag Columns (297.0ms)[0m   [0;1mSHOW FIELDS FROM `tags`[0m
+  [4;35;1mTag Exists (296.0ms)[0m   [0mSELECT `tags`.id FROM `tags` WHERE (`tags`.`name` = BINARY '史迪仔, 籃色, 公仔') LIMIT 1[0m
+  [4;36;1mTag Create (266.0ms)[0m   [0;1mINSERT INTO `tags` (`name`) VALUES('史迪仔, 籃色, 公仔')[0m
+  [4;35;1mTagging Create (297.0ms)[0m   [0mINSERT INTO `taggings` (`tag_id`, `taggable_type`, `taggable_id`, `created_at`) VALUES(1, 'Product', 5, '2009-08-27 15:11:27')[0m
+[paperclip] Saving attachments.
+[paperclip] saving C:/Development/sofo/public/system/products/images/5/thumb/stitch-christmas.jpg
+[paperclip] saving C:/Development/sofo/public/system/products/images/5/large/stitch-christmas.jpg
+[paperclip] saving C:/Development/sofo/public/system/products/images/5/tiny/stitch-christmas.jpg
+[paperclip] saving C:/Development/sofo/public/system/products/images/5/original/stitch-christmas.jpg
+  [4;36;1mSQL (390.0ms)[0m   [0;1mCOMMIT[0m
+Rendering products/show
+
+ActionView::TemplateError (undefined method `edit_product_path' for #<ActionView::Base:0x38fc6d8>) on line #21 of app/views/products/show.html.erb:
+18: </p>
+19: 
+20: 
+21: <%= link_to 'Edit', edit_product_path(@product) %> |
+22: <%= link_to 'Back', products_path %>
+
+    app/views/products/show.html.erb:21
+    app/controllers/products_controller.rb:48:in `create'
+    app/controllers/products_controller.rb:45:in `create'
+
+Rendered rescues/_trace (297.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (313.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (312.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2009-08-27 23:12:08) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"CsOVzmrl0I648gVRj1LU278LnGbhDaoj21UMj2G8fiM=", "product"=>{"tags"=>"史迪仔, 籃色, 公仔", "description"=>"得意既史迪仔", "image"=>#<File:C:/DOCUME~1/NICKTO~1/LOCALS~1/Temp/RackMultipart.3164.4>, "product_name"=>"史迪仔"}}
+  [4;35;1mProduct Columns (281.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mSQL (313.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mProduct Create (281.0ms)[0m   [0mINSERT INTO `products` (`image_file_size`, `updated_at`, `tags`, `image_content_type`, `description`, `product_name`, `image_updated_at`, `created_at`, `image_file_name`) VALUES(109961, '2009-08-27 15:12:16', NULL, 'image/jpeg', '得意既史迪仔', '史迪仔', '2009-08-27 15:12:09', '2009-08-27 15:12:16', 'stitch-christmas.jpg')[0m
+  [4;36;1mTag Load (297.0ms)[0m   [0;1mSELECT * FROM `tags` WHERE (name LIKE '史迪仔, 籃色, 公仔') LIMIT 1[0m
+  [4;35;1mTagging Create (265.0ms)[0m   [0mINSERT INTO `taggings` (`tag_id`, `taggable_type`, `taggable_id`, `created_at`) VALUES(1, 'Product', 6, '2009-08-27 15:12:17')[0m
+[paperclip] Saving attachments.
+[paperclip] saving C:/Development/sofo/public/system/products/images/6/thumb/stitch-christmas.jpg
+[paperclip] saving C:/Development/sofo/public/system/products/images/6/large/stitch-christmas.jpg
+[paperclip] saving C:/Development/sofo/public/system/products/images/6/tiny/stitch-christmas.jpg
+[paperclip] saving C:/Development/sofo/public/system/products/images/6/original/stitch-christmas.jpg
+  [4;36;1mSQL (328.0ms)[0m   [0;1mCOMMIT[0m
+Rendering products/show
+Completed in 8907ms (View: 16, DB: 2672) | 200 OK [http://localhost/products/create]
+  [4;35;1mSQL (297.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2009-08-27 23:13:51) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"CsOVzmrl0I648gVRj1LU278LnGbhDaoj21UMj2G8fiM=", "product"=>{"tags"=>"史迪仔, 籃色, 公仔, 測試", "description"=>"得意既史迪仔", "image"=>#<File:C:/DOCUME~1/NICKTO~1/LOCALS~1/Temp/RackMultipart.3164.0>, "product_name"=>"史迪仔"}}
+  [4;35;1mProduct Columns (266.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+
+ActiveRecord::AssociationTypeMismatch (Tag(#28123360) expected, got String(#21132310)):
+  app/controllers/products_controller.rb:42:in `new'
+  app/controllers/products_controller.rb:42:in `create'
+
+Rendered rescues/_trace (329.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (312.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2009-08-27 23:14:18) [GET]
+  [4;36;1mProduct Columns (281.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Rendering products/new
+Completed in 719ms (View: 79, DB: 1218) | 200 OK [http://localhost/products/new]
+  [4;35;1mSQL (297.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (312.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2009-08-27 23:14:37) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"CsOVzmrl0I648gVRj1LU278LnGbhDaoj21UMj2G8fiM=", "product"=>{"tags"=>"史迪仔, 公仔, 測試", "description"=>"得意既史迪仔", "image"=>#<File:C:/DOCUME~1/NICKTO~1/LOCALS~1/Temp/RackMultipart.3164.2>, "product_name"=>"史迪仔"}}
+  [4;35;1mProduct Columns (281.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+
+ActiveRecord::AssociationTypeMismatch (Tag(#28123360) expected, got String(#21132310)):
+  app/controllers/products_controller.rb:42:in `new'
+  app/controllers/products_controller.rb:42:in `create'
+
+Rendered rescues/_trace (360.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (313.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (312.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2009-08-27 23:15:22) [GET]
+  [4;36;1mProduct Columns (312.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Rendering products/new
+Completed in 672ms (View: 47, DB: 1219) | 200 OK [http://localhost/products/new]
+  [4;35;1mSQL (313.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2009-08-27 23:15:40) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"CsOVzmrl0I648gVRj1LU278LnGbhDaoj21UMj2G8fiM=", "product"=>{"description"=>"得意既史迪仔", "tag_list"=>"史迪仔, 公仔, 測試", "image"=>#<File:C:/DOCUME~1/NICKTO~1/LOCALS~1/Temp/RackMultipart.3164.3>, "product_name"=>"史迪仔"}}
+  [4;35;1mProduct Columns (359.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mSQL (328.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mProduct Create (296.0ms)[0m   [0mINSERT INTO `products` (`image_file_size`, `updated_at`, `tags`, `image_content_type`, `description`, `product_name`, `image_updated_at`, `created_at`, `image_file_name`) VALUES(109961, '2009-08-27 15:15:47', NULL, 'image/jpeg', '得意既史迪仔', '史迪仔', '2009-08-27 15:15:40', '2009-08-27 15:15:47', 'stitch-christmas.jpg')[0m
+  [4;36;1mTag Load (281.0ms)[0m   [0;1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.id = `taggings`.tag_id WHERE ((`taggings`.taggable_type = 'Product') AND (`taggings`.taggable_id = 7)) [0m
+  [4;35;1mTag Load (297.0ms)[0m   [0mSELECT * FROM `tags` WHERE (name LIKE '史迪仔') LIMIT 1[0m
+  [4;36;1mTag Exists (281.0ms)[0m   [0;1mSELECT `tags`.id FROM `tags` WHERE (`tags`.`name` = BINARY '史迪仔') LIMIT 1[0m
+  [4;35;1mTag Create (281.0ms)[0m   [0mINSERT INTO `tags` (`name`) VALUES('史迪仔')[0m
+  [4;36;1mTagging Create (453.0ms)[0m   [0;1mINSERT INTO `taggings` (`tag_id`, `taggable_type`, `taggable_id`, `created_at`) VALUES(2, 'Product', 7, '2009-08-27 15:15:48')[0m
+  [4;35;1mTag Load (391.0ms)[0m   [0mSELECT * FROM `tags` WHERE (name LIKE '公仔') LIMIT 1[0m
+  [4;36;1mTag Exists (297.0ms)[0m   [0;1mSELECT `tags`.id FROM `tags` WHERE (`tags`.`name` = BINARY '公仔') LIMIT 1[0m
+  [4;35;1mTag Create (406.0ms)[0m   [0mINSERT INTO `tags` (`name`) VALUES('公仔')[0m
+  [4;36;1mTagging Create (296.0ms)[0m   [0;1mINSERT INTO `taggings` (`tag_id`, `taggable_type`, `taggable_id`, `created_at`) VALUES(3, 'Product', 7, '2009-08-27 15:15:50')[0m
+  [4;35;1mTag Load (313.0ms)[0m   [0mSELECT * FROM `tags` WHERE (name LIKE '測試') LIMIT 1[0m
+  [4;36;1mTag Exists (297.0ms)[0m   [0;1mSELECT `tags`.id FROM `tags` WHERE (`tags`.`name` = BINARY '測試') LIMIT 1[0m
+  [4;35;1mTag Create (297.0ms)[0m   [0mINSERT INTO `tags` (`name`) VALUES('測試')[0m
+  [4;36;1mTagging Create (281.0ms)[0m   [0;1mINSERT INTO `taggings` (`tag_id`, `taggable_type`, `taggable_id`, `created_at`) VALUES(4, 'Product', 7, '2009-08-27 15:15:51')[0m
+[paperclip] Saving attachments.
+[paperclip] saving C:/Development/sofo/public/system/products/images/7/thumb/stitch-christmas.jpg
+[paperclip] saving C:/Development/sofo/public/system/products/images/7/large/stitch-christmas.jpg
+[paperclip] saving C:/Development/sofo/public/system/products/images/7/tiny/stitch-christmas.jpg
+[paperclip] saving C:/Development/sofo/public/system/products/images/7/original/stitch-christmas.jpg
+  [4;35;1mSQL (375.0ms)[0m   [0mCOMMIT[0m
+Rendering products/show
+Completed in 12484ms (View: 15, DB: 6420) | 200 OK [http://localhost/products/create]
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (313.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-08-27 23:51:42) [GET]
+  [4;36;1mTag Load (1156.0ms)[0m   [0;1mSELECT tags.id, tags.name, COUNT(*) AS count FROM `tags` INNER JOIN taggings ON tags.id = taggings.tag_id INNER JOIN products ON products.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Product') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+Rendering template within layouts/home
+Rendering home/index
+ERROR: compiling _run_erb_app47views47home47index46html46erb RAISED compile error
+C:/Development/sofo/app/views/home/index.html.erb:4: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_erb_app47views47home47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ;  tag_cloud @tags ; @output_buffer.concat "\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( link_to tag.name, { :action => :tag, :id => tag.name } ).to_s); @output_buffer.concat "\n"
+ end ; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Development/sofo/app/views/home/index.html.erb:4:in `compile!'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:343:in `_render_with_layout'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:257:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/abstract_store.rb:122:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/Development/sofo/app/views/home/index.html.erb:4: syntax error, unexpected kENSURE, expecting $end) on line #4 of app/views/home/index.html.erb:
+1: <% tag_cloud @tags %>
+2: 	<%= link_to tag.name, { :action => :tag, :id => tag.name } %>
+3: <% end %>
+
+    app/views/home/index.html.erb:4:in `compile!'
+
+Rendered rescues/_trace (328.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (297.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (312.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-08-28 00:07:54) [GET]
+  [4;35;1mTag Load (266.0ms)[0m   [0mSELECT tags.id, tags.name, COUNT(*) AS count FROM `tags` INNER JOIN taggings ON tags.id = taggings.tag_id INNER JOIN products ON products.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Product') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+Rendering template within layouts/home
+Rendering home/index
+ERROR: compiling _run_erb_app47views47home47index46html46erb RAISED compile error
+C:/Development/sofo/app/views/home/index.html.erb:1: syntax error, unexpected kDO_BLOCK
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ;  tag_cloud @tags, do |tag| ; @output_buffer.concat "\n"
+                                                                                                                  ^
+C:/Development/sofo/app/views/home/index.html.erb:4: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_erb_app47views47home47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ;  tag_cloud @tags, do |tag| ; @output_buffer.concat "\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( link_to tag.name, { :action => :tag, :id => tag.name } ).to_s); @output_buffer.concat "\n"
+ end ; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Development/sofo/app/views/home/index.html.erb:4:in `compile!'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:343:in `_render_with_layout'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:257:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/abstract_store.rb:122:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/Development/sofo/app/views/home/index.html.erb:1: syntax error, unexpected kDO_BLOCK
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ;  tag_cloud @tags, do |tag| ; @output_buffer.concat "\n"
+                                                                                                                  ^
+C:/Development/sofo/app/views/home/index.html.erb:4: syntax error, unexpected kENSURE, expecting $end) on line #1 of app/views/home/index.html.erb:
+1: <% tag_cloud @tags, do |tag| %>
+2: 	<%= link_to tag.name, { :action => :tag, :id => tag.name } %>
+3: <% end %>
+
+    app/views/home/index.html.erb:4:in `compile!'
+
+Rendered rescues/_trace (282.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (407.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (296.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-08-28 00:08:26) [GET]
+  [4;36;1mTag Load (281.0ms)[0m   [0;1mSELECT tags.id, tags.name, COUNT(*) AS count FROM `tags` INNER JOIN taggings ON tags.id = taggings.tag_id INNER JOIN products ON products.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Product') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+Rendering template within layouts/home
+Rendering home/index
+Completed in 734ms (View: 78, DB: 1328) | 200 OK [http://localhost/home/index]
+  [4;35;1mSQL (297.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (313.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#tag (for 127.0.0.1 at 2009-08-28 00:08:36) [GET]
+  Parameters: {"id"=>"公仔"}
+
+ActionController::UnknownAction (No action responded to tag. Actions: back and index):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (406.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (625.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#tag (for 127.0.0.1 at 2009-08-28 00:46:51) [GET]
+  Parameters: {"id"=>"公仔"}
+
+ActionController::UnknownAction (No action responded to tag. Actions: back, index, and show_product):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (313.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (312.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-08-28 01:16:38) [GET]
+  [4;35;1mTag Load (344.0ms)[0m   [0mSELECT tags.id, tags.name, COUNT(*) AS count FROM `tags` INNER JOIN taggings ON tags.id = taggings.tag_id INNER JOIN products ON products.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Product') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+Rendering template within layouts/home
+Rendering home/index
+Completed in 859ms (View: 47, DB: 1360) | 200 OK [http://localhost/home/index]
+  [4;36;1mSQL (313.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (312.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#show_products (for 127.0.0.1 at 2009-08-28 01:16:44) [GET]
+  Parameters: {"id"=>"公仔"}
+
+ActionController::UnknownAction (No action responded to show_products. Actions: back, index, and show_product):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (312.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (313.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#show_products (for 127.0.0.1 at 2009-08-28 01:16:58) [GET]
+  Parameters: {"id"=>"公仔"}
+  [4;36;1mProduct Load (344.0ms)[0m   [0;1mSELECT DISTINCT products.* FROM `products` INNER JOIN taggings products_taggings ON products_taggings.taggable_id = products.id AND products_taggings.taggable_type = 'Product' INNER JOIN tags products_tags ON products_tags.id = products_taggings.tag_id WHERE ((products_tags.name LIKE '公仔')) [0m
+
+ActionView::MissingTemplate (Missing template home/show_products.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (313.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#show_products (for 127.0.0.1 at 2009-08-28 01:17:25) [GET]
+  Parameters: {"id"=>"公仔"}
+  [4;35;1mProduct Load (265.0ms)[0m   [0mSELECT DISTINCT products.* FROM `products` INNER JOIN taggings products_taggings ON products_taggings.taggable_id = products.id AND products_taggings.taggable_type = 'Product' INNER JOIN tags products_tags ON products_tags.id = products_taggings.tag_id WHERE ((products_tags.name LIKE '公仔')) [0m
+Rendering template within layouts/home
+Rendering home/show_products
+  [4;36;1mProduct Columns (375.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mTag Load (344.0ms)[0m   [0mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.id = `taggings`.tag_id WHERE ((`taggings`.taggable_type = 'Product') AND (`taggings`.taggable_id = 7)) [0m
+Completed in 1562ms (View: 187, DB: 1891) | 200 OK [http://localhost/home/show_products/%E5%85%AC%E4%BB%94]
+  [4;36;1mSQL (313.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (265.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-08-28 12:37:44) [GET]
+  [4;36;1mTag Load (313.0ms)[0m   [0;1mSELECT tags.id, tags.name, COUNT(*) AS count FROM `tags` INNER JOIN taggings ON tags.id = taggings.tag_id INNER JOIN products ON products.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Product') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+Rendering template within layouts/home
+Rendering home/index
+  [4;35;1mTag Columns (250.0ms)[0m   [0mSHOW FIELDS FROM `tags`[0m
+Completed in 1719ms (View: 172, DB: 1798) | 200 OK [http://localhost/home/index]
+  [4;36;1mSQL (282.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (297.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#show_products (for 127.0.0.1 at 2009-08-28 12:37:51) [GET]
+  Parameters: {"tag_name"=>"公仔"}
+  [4;36;1mTag Load (297.0ms)[0m   [0;1mSELECT * FROM `tags` WHERE (`tags`.`name` = '公仔') LIMIT 1[0m
+
+NoMethodError (undefined method `clcik_count=' for #<Tag id: 3, name: "公仔", click_count: 0>):
+  app/controllers/home_controller.rb:8:in `show_products'
+
+Rendered rescues/_trace (313.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (406.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (313.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#show_products (for 127.0.0.1 at 2009-08-28 12:38:09) [GET]
+  Parameters: {"tag_name"=>"公仔"}
+  [4;35;1mTag Load (296.0ms)[0m   [0mSELECT * FROM `tags` WHERE (`tags`.`name` = '公仔') LIMIT 1[0m
+  [4;36;1mSQL (297.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTag Exists (296.0ms)[0m   [0mSELECT `tags`.id FROM `tags` WHERE (`tags`.`name` = BINARY '公仔' AND `tags`.id <> 3) LIMIT 1[0m
+  [4;36;1mTag Update (297.0ms)[0m   [0;1mUPDATE `tags` SET `click_count` = 1 WHERE `id` = 3[0m
+  [4;35;1mSQL (297.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mProduct Load (312.0ms)[0m   [0;1mSELECT DISTINCT products.* FROM `products` INNER JOIN taggings products_taggings ON products_taggings.taggable_id = products.id AND products_taggings.taggable_type = 'Product' INNER JOIN tags products_tags ON products_tags.id = products_taggings.tag_id WHERE ((products_tags.name LIKE '公仔')) [0m
+
+ActionView::MissingTemplate (Missing template home/show_products.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (313.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (312.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#show_products (for 127.0.0.1 at 2009-08-28 12:38:46) [GET]
+  Parameters: {"tag_name"=>"公仔"}
+
+ActionController::UnknownAction (No action responded to show_products. Actions: back, index, and tag_products):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (297.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (313.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#show_products (for 127.0.0.1 at 2009-08-28 12:38:50) [GET]
+  Parameters: {"tag_name"=>"公仔"}
+
+ActionController::UnknownAction (No action responded to show_products. Actions: back, index, and tag_products):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (313.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (312.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-08-28 12:39:03) [GET]
+  [4;35;1mTag Load (281.0ms)[0m   [0mSELECT tags.id, tags.name, COUNT(*) AS count FROM `tags` INNER JOIN taggings ON tags.id = taggings.tag_id INNER JOIN products ON products.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Product') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+Rendering template within layouts/home
+Rendering home/index
+Completed in 734ms (View: 63, DB: 1250) | 200 OK [http://localhost/home/index]
+  [4;36;1mSQL (313.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (297.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#tag_products (for 127.0.0.1 at 2009-08-28 12:39:08) [GET]
+  Parameters: {"tag_name"=>"測試"}
+  [4;36;1mTag Load (297.0ms)[0m   [0;1mSELECT * FROM `tags` WHERE (`tags`.`name` = '測試') LIMIT 1[0m
+  [4;35;1mSQL (297.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mTag Exists (297.0ms)[0m   [0;1mSELECT `tags`.id FROM `tags` WHERE (`tags`.`name` = BINARY '測試' AND `tags`.id <> 4) LIMIT 1[0m
+  [4;35;1mTag Update (297.0ms)[0m   [0mUPDATE `tags` SET `click_count` = 1 WHERE `id` = 4[0m
+  [4;36;1mSQL (312.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mProduct Load (266.0ms)[0m   [0mSELECT DISTINCT products.* FROM `products` INNER JOIN taggings products_taggings ON products_taggings.taggable_id = products.id AND products_taggings.taggable_type = 'Product' INNER JOIN tags products_tags ON products_tags.id = products_taggings.tag_id WHERE ((products_tags.name LIKE '測試')) [0m
+Rendering template within layouts/home
+Rendering home/tag_products
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.tag_name) on line #3 of app/views/home/tag_products.html.erb:
+1: <p>
+2:   <div class="tag-title">
+3:   	<h2><%=h @tag.tag_name %></h2>
+4:   </div>
+5:   <div id="product-list">
+6: 	<table cellpadding="5" cellspacing="0">
+
+    app/views/home/tag_products.html.erb:3
+
+Rendered rescues/_trace (265.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (312.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (313.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#tag_products (for 127.0.0.1 at 2009-08-28 12:40:23) [GET]
+  Parameters: {"tag_name"=>"測試"}
+  [4;36;1mTag Load (297.0ms)[0m   [0;1mSELECT * FROM `tags` WHERE (`tags`.`name` = '測試') LIMIT 1[0m
+
+NameError (undefined local variable or method `tag' for #<HomeController:0x37fc51c>):
+  app/controllers/home_controller.rb:8:in `tag_products'
+
+Rendered rescues/_trace (500.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (313.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (296.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#tag_products (for 127.0.0.1 at 2009-08-28 12:40:35) [GET]
+  Parameters: {"tag_name"=>"測試"}
+  [4;35;1mTag Load (234.0ms)[0m   [0mSELECT * FROM `tags` WHERE (`tags`.`name` = '測試') LIMIT 1[0m
+
+NameError (undefined local variable or method `tag' for #<HomeController:0x3a98604>):
+  app/controllers/home_controller.rb:8:in `tag_products'
+
+Rendered rescues/_trace (312.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (313.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (297.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#tag_products (for 127.0.0.1 at 2009-08-28 12:40:58) [GET]
+  Parameters: {"tag_name"=>"測試"}
+  [4;36;1mTag Load (297.0ms)[0m   [0;1mSELECT * FROM `tags` WHERE (`tags`.`name` = '測試') LIMIT 1[0m
+  [4;35;1mSQL (297.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mTag Exists (313.0ms)[0m   [0;1mSELECT `tags`.id FROM `tags` WHERE (`tags`.`name` = BINARY '測試' AND `tags`.id <> 4) LIMIT 1[0m
+  [4;35;1mTag Update (297.0ms)[0m   [0mUPDATE `tags` SET `click_count` = 2 WHERE `id` = 4[0m
+  [4;36;1mSQL (297.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mProduct Load (375.0ms)[0m   [0mSELECT DISTINCT products.* FROM `products` INNER JOIN taggings products_taggings ON products_taggings.taggable_id = products.id AND products_taggings.taggable_type = 'Product' INNER JOIN tags products_tags ON products_tags.id = products_taggings.tag_id WHERE ((products_tags.name LIKE '測試')) [0m
+Rendering template within layouts/home
+Rendering home/tag_products
+  [4;36;1mProduct Columns (281.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47home47tag_products46html46erb at C:/Development/sofo/app/views/home/tag_products.html.erb:14)
+Completed in 3078ms (View: 516, DB: 3111) | 200 OK [http://localhost/home/tag_products?tag_name=%E6%B8%AC%E8%A9%A6]
+  [4;35;1mSQL (313.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#product_posts (for 127.0.0.1 at 2009-08-28 12:45:31) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mProduct Columns (266.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (313.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 7) [0m
+Rendering template within layouts/home
+Rendering home/product_posts
+  [4;35;1mPost Load (266.0ms)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.product_id = 7) [0m
+Completed in 1343ms (View: 155, DB: 1752) | 200 OK [http://localhost/home/product_posts/7]
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (312.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#product_posts (for 127.0.0.1 at 2009-08-28 12:46:51) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mProduct Columns (266.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (297.0ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 7) [0m
+Rendering template within layouts/home
+Rendering home/product_posts
+  [4;36;1mPost Load (328.0ms)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.product_id = 7) [0m
+Completed in 1297ms (View: 94, DB: 1766) | 200 OK [http://localhost/home/product_posts/7]
+  [4;35;1mSQL (296.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#product_posts (for 127.0.0.1 at 2009-08-28 12:53:16) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mProduct Columns (281.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (297.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 7) [0m
+  [4;35;1mPost Columns (375.0ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+Rendering template within layouts/home
+Rendering home/product_posts
+  [4;36;1mPost Load (234.0ms)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.product_id = 7) [0m
+
+ActionView::TemplateError (undefined method `posts_path' for #<ActionView::Base:0x38638ac>) on line #35 of app/views/home/product_posts.html.erb:
+32: 	  </table>
+33: 	</div>
+34: <div>
+35: <% form_for(@new_post) do |f| %>
+36:   <%= f.error_messages %>
+37: 
+38:   <p>
+
+    app/views/home/product_posts.html.erb:35
+
+Rendered rescues/_trace (578.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (297.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#product_posts (for 127.0.0.1 at 2009-08-28 12:54:07) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mProduct Columns (281.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (297.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 7) [0m
+  [4;35;1mPost Columns (265.0ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+Rendering template within layouts/home
+Rendering home/product_posts
+  [4;36;1mPost Load (328.0ms)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.product_id = 7) [0m
+Completed in 1688ms (View: 94, DB: 2093) | 200 OK [http://localhost/home/product_posts/7]
+  [4;35;1mSQL (312.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (313.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#product_posts (for 127.0.0.1 at 2009-08-28 12:55:15) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mProduct Columns (281.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (406.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 7) [0m
+  [4;35;1mPost Columns (250.0ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+Rendering template within layouts/home
+Rendering home/product_posts
+  [4;36;1mPost Load (313.0ms)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.product_id = 7) [0m
+Completed in 1812ms (View: 109, DB: 2218) | 200 OK [http://localhost/home/product_posts/7]
+  [4;35;1mSQL (312.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (313.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#create (for 127.0.0.1 at 2009-08-28 12:55:55) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"CsOVzmrl0I648gVRj1LU278LnGbhDaoj21UMj2G8fiM=", "post"=>{"short_title"=>"如果.....", "product_id"=>"7", "content"=>"我都有一隻就好喇"}}
+
+ActionController::UnknownAction (No action responded to create. Actions: back, index, product_posts, and tag_products):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (313.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (312.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#product_posts (for 127.0.0.1 at 2009-08-28 12:56:35) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mProduct Columns (281.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (297.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 7) [0m
+  [4;35;1mPost Columns (265.0ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+Rendering template within layouts/home
+Rendering home/product_posts
+  [4;36;1mPost Load (297.0ms)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.product_id = 7) [0m
+Completed in 1703ms (View: 109, DB: 2109) | 200 OK [http://localhost/home/product_posts/7]
+  [4;35;1mSQL (297.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (313.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-08-28 12:56:45) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"CsOVzmrl0I648gVRj1LU278LnGbhDaoj21UMj2G8fiM=", "post"=>{"short_title"=>"如果.....", "product_id"=>"7", "content"=>"我都有一隻就好喇"}}
+
+ActionController::RoutingError (No route matches "/posts/create" with {:method=>:post}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (312.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#product_posts (for 127.0.0.1 at 2009-08-28 12:58:53) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mProduct Columns (281.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (313.0ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 7) [0m
+  [4;36;1mPost Columns (235.0ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+Rendering template within layouts/home
+Rendering home/product_posts
+  [4;35;1mPost Load (250.0ms)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.product_id = 7) [0m
+Completed in 2718ms (View: 687, DB: 2360) | 200 OK [http://localhost/home/product_posts/7]
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (313.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-08-28 12:59:19) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"CsOVzmrl0I648gVRj1LU278LnGbhDaoj21UMj2G8fiM=", "post"=>{"short_title"=>"如果.....", "product_id"=>"7", "content"=>"我有1隻就好喇"}}
+  [4;36;1mUser Columns (359.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (297.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`loginname` = 'nickto') LIMIT 1[0m
+  [4;36;1mPost Columns (250.0ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+  [4;35;1mSQL (329.0ms)[0m   [0mSHOW TABLES[0m
+
+NoMethodError (undefined method `find_by_name' for #<Class:0x35ae454>):
+  app/controllers/posts_controller.rb:5:in `create'
+
+Rendered rescues/_trace (422.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (313.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-08-28 13:00:10) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"CsOVzmrl0I648gVRj1LU278LnGbhDaoj21UMj2G8fiM=", "post"=>{"short_title"=>"如果.....", "product_id"=>"7", "content"=>"我有1隻就好喇"}}
+  [4;36;1mUser Columns (250.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (297.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`loginname` = 'nickto') LIMIT 1[0m
+  [4;36;1mPost Columns (265.0ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+  [4;35;1mSQL (281.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mMysql::Error: Column 'short_title' cannot be null: INSERT INTO `posts` (`updated_at`, `good_count`, `short_title`, `product_id`, `content`, `user_id`, `created_at`) VALUES('2009-08-28 05:00:12', 0, NULL, NULL, '', 1, '2009-08-28 05:00:12')[0m
+  [4;35;1mSQL (312.0ms)[0m   [0mROLLBACK[0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: Column 'short_title' cannot be null: INSERT INTO `posts` (`updated_at`, `good_count`, `short_title`, `product_id`, `content`, `user_id`, `created_at`) VALUES('2009-08-28 05:00:12', 0, NULL, NULL, '', 1, '2009-08-28 05:00:12')):
+  app/controllers/posts_controller.rb:9:in `create'
+  app/controllers/posts_controller.rb:8:in `create'
+
+Rendered rescues/_trace (515.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (312.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (313.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-08-28 13:01:08) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"CsOVzmrl0I648gVRj1LU278LnGbhDaoj21UMj2G8fiM=", "post"=>{"short_title"=>"如果", "product_id"=>"7", "content"=>"我有1隻就好喇"}}
+  [4;36;1mUser Columns (266.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (297.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`loginname` = 'nickto') LIMIT 1[0m
+  [4;36;1mPost Columns (250.0ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+  [4;35;1mSQL (297.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mMysql::Error: Column 'short_title' cannot be null: INSERT INTO `posts` (`updated_at`, `good_count`, `short_title`, `product_id`, `content`, `user_id`, `created_at`) VALUES('2009-08-28 05:01:09', 0, NULL, NULL, '', 1, '2009-08-28 05:01:09')[0m
+  [4;35;1mSQL (312.0ms)[0m   [0mROLLBACK[0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: Column 'short_title' cannot be null: INSERT INTO `posts` (`updated_at`, `good_count`, `short_title`, `product_id`, `content`, `user_id`, `created_at`) VALUES('2009-08-28 05:01:09', 0, NULL, NULL, '', 1, '2009-08-28 05:01:09')):
+  app/controllers/posts_controller.rb:9:in `create'
+  app/controllers/posts_controller.rb:8:in `create'
+
+Rendered rescues/_trace (469.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (312.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#product_posts (for 127.0.0.1 at 2009-08-28 13:02:49) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mProduct Columns (281.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (297.0ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 7) [0m
+  [4;36;1mPost Columns (265.0ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+Rendering template within layouts/home
+Rendering home/product_posts
+  [4;35;1mPost Load (266.0ms)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.product_id = 7) [0m
+Completed in 1515ms (View: 46, DB: 1983) | 200 OK [http://localhost/home/product_posts/7]
+  [4;36;1mSQL (407.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (312.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-08-28 13:02:57) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"CsOVzmrl0I648gVRj1LU278LnGbhDaoj21UMj2G8fiM=", "post"=>{"short_title"=>"如果", "product_id"=>"7", "content"=>"我有1隻就好喇"}}
+  [4;36;1mUser Columns (360.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (297.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`loginname` = 'nickto') LIMIT 1[0m
+  [4;36;1mPost Columns (250.0ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+  [4;35;1mSQL (282.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mMysql::Error: Column 'short_title' cannot be null: INSERT INTO `posts` (`updated_at`, `good_count`, `short_title`, `product_id`, `content`, `user_id`, `created_at`) VALUES('2009-08-28 05:02:58', 0, NULL, NULL, '', 1, '2009-08-28 05:02:58')[0m
+  [4;35;1mSQL (406.0ms)[0m   [0mROLLBACK[0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: Column 'short_title' cannot be null: INSERT INTO `posts` (`updated_at`, `good_count`, `short_title`, `product_id`, `content`, `user_id`, `created_at`) VALUES('2009-08-28 05:02:58', 0, NULL, NULL, '', 1, '2009-08-28 05:02:58')):
+  app/controllers/posts_controller.rb:9:in `create'
+  app/controllers/posts_controller.rb:8:in `create'
+
+Rendered rescues/_trace (437.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (313.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (297.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#tag_products (for 127.0.0.1 at 2009-08-28 13:04:38) [GET]
+  Parameters: {"tag_name"=>"測試"}
+  [4;36;1mTag Columns (344.0ms)[0m   [0;1mSHOW FIELDS FROM `tags`[0m
+  [4;35;1mTag Load (297.0ms)[0m   [0mSELECT * FROM `tags` WHERE (`tags`.`name` = '測試') LIMIT 1[0m
+  [4;36;1mSQL (297.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTag Exists (297.0ms)[0m   [0mSELECT `tags`.id FROM `tags` WHERE (`tags`.`name` = BINARY '測試' AND `tags`.id <> 4) LIMIT 1[0m
+  [4;36;1mTag Update (297.0ms)[0m   [0;1mUPDATE `tags` SET `click_count` = 3 WHERE `id` = 4[0m
+  [4;35;1mSQL (313.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mProduct Load (343.0ms)[0m   [0;1mSELECT DISTINCT products.* FROM `products` INNER JOIN taggings products_taggings ON products_taggings.taggable_id = products.id AND products_taggings.taggable_type = 'Product' INNER JOIN tags products_tags ON products_tags.id = products_taggings.tag_id WHERE ((products_tags.name LIKE '測試')) [0m
+Rendering template within layouts/home
+Rendering home/tag_products
+  [4;35;1mProduct Columns (281.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47home47tag_products46html46erb at C:/Development/sofo/app/views/home/tag_products.html.erb:14)
+Completed in 3266ms (View: 63, DB: 3329) | 200 OK [http://localhost/home/tag_products?tag_name=%E6%B8%AC%E8%A9%A6]
+  [4;36;1mSQL (313.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (297.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#product_posts (for 127.0.0.1 at 2009-08-28 13:04:45) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mProduct Columns (266.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (297.0ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 7) [0m
+  [4;36;1mPost Columns (266.0ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+Rendering template within layouts/home
+Rendering home/product_posts
+  [4;35;1mPost Load (312.0ms)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.product_id = 7) [0m
+Completed in 1687ms (View: 110, DB: 2079) | 200 OK [http://localhost/home/product_posts/7]
+  [4;36;1mSQL (312.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (297.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-08-28 13:05:03) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"CsOVzmrl0I648gVRj1LU278LnGbhDaoj21UMj2G8fiM=", "post"=>{"short_title"=>"如果", "product_id"=>"7", "content"=>"我都有1隻"}}
+  [4;36;1mUser Columns (250.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (406.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`loginname` = 'nickto') LIMIT 1[0m
+  [4;36;1mPost Columns (250.0ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+  [4;35;1mSQL (281.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mPost Create (391.0ms)[0m   [0;1mINSERT INTO `posts` (`updated_at`, `good_count`, `short_title`, `product_id`, `content`, `user_id`, `created_at`) VALUES('2009-08-28 05:05:04', 0, '如果', 7, '我都有1隻', 1, '2009-08-28 05:05:04')[0m
+  [4;35;1mSQL (312.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/posts/create
+Completed in 2359ms (DB: 2811) | 302 Found [http://localhost/posts/create]
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (297.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-08-28 13:05:08) [GET]
+  [4;36;1mUser Columns (359.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (297.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`loginname` = 'nickto') LIMIT 1[0m
+  [4;36;1mPost Columns (265.0ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+  [4;35;1mSQL (297.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mMysql::Error: Column 'short_title' cannot be null: INSERT INTO `posts` (`updated_at`, `good_count`, `short_title`, `product_id`, `content`, `user_id`, `created_at`) VALUES('2009-08-28 05:05:10', 0, NULL, NULL, '', 1, '2009-08-28 05:05:10')[0m
+  [4;35;1mSQL (312.0ms)[0m   [0mROLLBACK[0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: Column 'short_title' cannot be null: INSERT INTO `posts` (`updated_at`, `good_count`, `short_title`, `product_id`, `content`, `user_id`, `created_at`) VALUES('2009-08-28 05:05:10', 0, NULL, NULL, '', 1, '2009-08-28 05:05:10')):
+  app/controllers/posts_controller.rb:9:in `create'
+  app/controllers/posts_controller.rb:8:in `create'
+
+Rendered rescues/_trace (312.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (313.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#tag_products (for 127.0.0.1 at 2009-08-28 13:08:03) [GET]
+  Parameters: {"tag_name"=>"測試"}
+  [4;36;1mTag Load (297.0ms)[0m   [0;1mSELECT * FROM `tags` WHERE (`tags`.`name` = '測試') LIMIT 1[0m
+  [4;35;1mSQL (312.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mTag Exists (297.0ms)[0m   [0;1mSELECT `tags`.id FROM `tags` WHERE (`tags`.`name` = BINARY '測試' AND `tags`.id <> 4) LIMIT 1[0m
+  [4;35;1mTag Update (296.0ms)[0m   [0mUPDATE `tags` SET `click_count` = 4 WHERE `id` = 4[0m
+  [4;36;1mSQL (313.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mProduct Load (235.0ms)[0m   [0mSELECT DISTINCT products.* FROM `products` INNER JOIN taggings products_taggings ON products_taggings.taggable_id = products.id AND products_taggings.taggable_type = 'Product' INNER JOIN tags products_tags ON products_tags.id = products_taggings.tag_id WHERE ((products_tags.name LIKE '測試')) [0m
+Rendering template within layouts/home
+Rendering home/tag_products
+  [4;36;1mProduct Columns (281.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47home47tag_products46html46erb at C:/Development/sofo/app/views/home/tag_products.html.erb:14)
+Completed in 2516ms (View: 48, DB: 2969) | 200 OK [http://localhost/home/tag_products?tag_name=%E6%B8%AC%E8%A9%A6]
+  [4;35;1mSQL (313.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#product_posts (for 127.0.0.1 at 2009-08-28 13:09:27) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mProduct Columns (281.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (297.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 7) [0m
+  [4;35;1mPost Columns (265.0ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+Rendering template within layouts/home
+Rendering home/product_posts
+  [4;36;1mPost Load (250.0ms)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.product_id = 7) [0m
+  [4;35;1mUser Columns (454.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (296.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Completed in 2625ms (View: 437, DB: 2703) | 200 OK [http://localhost/home/product_posts/7]
+  [4;35;1mSQL (297.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (313.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#product_posts (for 127.0.0.1 at 2009-08-28 13:10:00) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mProduct Columns (266.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (297.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 7) [0m
+  [4;35;1mPost Columns (250.0ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+Rendering template within layouts/home
+Rendering home/product_posts
+  [4;36;1mPost Load (312.0ms)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.product_id = 7) [0m
+  [4;35;1mUser Columns (328.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (313.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Completed in 2453ms (View: 204, DB: 2719) | 200 OK [http://localhost/home/product_posts/7]
+  [4;35;1mSQL (297.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (313.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-08-28 13:10:09) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"CsOVzmrl0I648gVRj1LU278LnGbhDaoj21UMj2G8fiM=", "post"=>{"short_title"=>"點解", "product_id"=>"7", "content"=>"得左都error?"}}
+  [4;35;1mUser Columns (250.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (297.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`loginname` = 'nickto') LIMIT 1[0m
+  [4;35;1mPost Columns (250.0ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+  [4;36;1mSQL (282.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPost Create (297.0ms)[0m   [0mINSERT INTO `posts` (`updated_at`, `good_count`, `short_title`, `product_id`, `content`, `user_id`, `created_at`) VALUES('2009-08-28 05:10:11', 0, '點解', 7, '得左都error?', 1, '2009-08-28 05:10:11')[0m
+  [4;36;1mSQL (297.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/posts/create
+Completed in 2141ms (DB: 2564) | 302 Found [http://localhost/posts/create]
+  [4;35;1mSQL (312.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (313.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-08-28 13:10:15) [GET]
+  [4;35;1mUser Columns (250.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (297.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`loginname` = 'nickto') LIMIT 1[0m
+  [4;35;1mPost Columns (250.0ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+  [4;36;1mSQL (281.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mMysql::Error: Column 'short_title' cannot be null: INSERT INTO `posts` (`updated_at`, `good_count`, `short_title`, `product_id`, `content`, `user_id`, `created_at`) VALUES('2009-08-28 05:10:16', 0, NULL, NULL, '', 1, '2009-08-28 05:10:16')[0m
+  [4;36;1mSQL (312.0ms)[0m   [0;1mROLLBACK[0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: Column 'short_title' cannot be null: INSERT INTO `posts` (`updated_at`, `good_count`, `short_title`, `product_id`, `content`, `user_id`, `created_at`) VALUES('2009-08-28 05:10:16', 0, NULL, NULL, '', 1, '2009-08-28 05:10:16')):
+  app/controllers/posts_controller.rb:9:in `create'
+  app/controllers/posts_controller.rb:8:in `create'
+
+Rendered rescues/_trace (578.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (406.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (313.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#product_posts (for 127.0.0.1 at 2009-08-28 13:11:48) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mProduct Columns (282.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (312.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 7) [0m
+  [4;35;1mPost Columns (266.0ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+Rendering template within layouts/home
+Rendering home/product_posts
+  [4;36;1mPost Load (250.0ms)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.product_id = 7) [0m
+  [4;35;1mUser Columns (328.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (297.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Completed in 2344ms (View: 188, DB: 2782) | 200 OK [http://localhost/home/product_posts/7]
+  [4;36;1mSQL (312.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (297.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-08-28 13:12:02) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"CsOVzmrl0I648gVRj1LU278LnGbhDaoj21UMj2G8fiM=", "post"=>{"short_title"=>"救命", "product_id"=>"7", "content"=>"得左都error?"}}
+  [4;36;1mUser Columns (266.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (296.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`loginname` = 'nickto') LIMIT 1[0m
+  [4;36;1mPost Columns (250.0ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+  [4;35;1mSQL (296.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mPost Create (297.0ms)[0m   [0;1mINSERT INTO `posts` (`updated_at`, `good_count`, `short_title`, `product_id`, `content`, `user_id`, `created_at`) VALUES('2009-08-28 05:12:03', 0, '救命', 7, '得左都error?', 1, '2009-08-28 05:12:03')[0m
+  [4;35;1mSQL (313.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/posts/create
+Completed in 2156ms (DB: 2639) | 302 Found [http://localhost/posts/create]
+  [4;36;1mSQL (313.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (312.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-08-28 13:12:07) [GET]
+  [4;36;1mUser Columns (328.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (297.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`loginname` = 'nickto') LIMIT 1[0m
+  [4;36;1mPost Columns (250.0ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+  [4;35;1mSQL (297.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mMysql::Error: Column 'short_title' cannot be null: INSERT INTO `posts` (`updated_at`, `good_count`, `short_title`, `product_id`, `content`, `user_id`, `created_at`) VALUES('2009-08-28 05:12:09', 0, NULL, NULL, '', 1, '2009-08-28 05:12:09')[0m
+  [4;35;1mSQL (297.0ms)[0m   [0mROLLBACK[0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: Column 'short_title' cannot be null: INSERT INTO `posts` (`updated_at`, `good_count`, `short_title`, `product_id`, `content`, `user_id`, `created_at`) VALUES('2009-08-28 05:12:09', 0, NULL, NULL, '', 1, '2009-08-28 05:12:09')):
+  app/controllers/posts_controller.rb:8:in `create'
+  app/controllers/posts_controller.rb:7:in `create'
+
+Rendered rescues/_trace (594.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (313.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (312.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#product_posts (for 127.0.0.1 at 2009-08-28 13:13:09) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mProduct Columns (281.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (297.0ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 7) [0m
+  [4;36;1mPost Columns (281.0ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+Rendering template within layouts/home
+Rendering home/product_posts
+  [4;35;1mPost Load (281.0ms)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.product_id = 7) [0m
+  [4;36;1mUser Columns (250.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (297.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Completed in 2235ms (View: 126, DB: 2656) | 200 OK [http://localhost/home/product_posts/7]
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (312.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-08-28 13:13:20) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"CsOVzmrl0I648gVRj1LU278LnGbhDaoj21UMj2G8fiM=", "post"=>{"short_title"=>".....", "product_id"=>"7", "content"=>"得左都error?"}}
+  [4;36;1mUser Columns (250.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (313.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`loginname` = 'nickto') LIMIT 1[0m
+  [4;36;1mPost Columns (266.0ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+Redirected to http://localhost:3000/posts/create
+Completed in 1219ms (DB: 1688) | 302 Found [http://localhost/posts/create]
+  [4;35;1mSQL (312.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (313.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-08-28 13:13:24) [GET]
+  [4;35;1mUser Columns (281.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (297.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`loginname` = 'nickto') LIMIT 1[0m
+  [4;35;1mPost Columns (312.0ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+Redirected to http://localhost:3000/posts/create
+Completed in 1610ms (DB: 1781) | 302 Found [http://localhost/posts/create]
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (312.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-08-28 13:13:29) [GET]
+  [4;36;1mUser Columns (297.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (250.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`loginname` = 'nickto') LIMIT 1[0m
+  [4;36;1mPost Columns (266.0ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+Redirected to http://localhost:3000/posts/create
+Completed in 1266ms (DB: 1734) | 302 Found [http://localhost/posts/create]
+  [4;35;1mSQL (312.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (313.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-08-28 13:13:34) [GET]
+  [4;35;1mUser Columns (250.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (297.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`loginname` = 'nickto') LIMIT 1[0m
+  [4;35;1mPost Columns (250.0ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+Redirected to http://localhost:3000/posts/create
+Completed in 1219ms (DB: 1687) | 302 Found [http://localhost/posts/create]
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (312.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-08-28 13:13:38) [GET]
+  [4;36;1mUser Columns (265.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (281.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`loginname` = 'nickto') LIMIT 1[0m
+  [4;36;1mPost Columns (250.0ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+Redirected to http://localhost:3000/posts/create
+Completed in 1250ms (DB: 1718) | 302 Found [http://localhost/posts/create]
+  [4;35;1mSQL (312.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (313.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-08-28 13:13:42) [GET]
+  [4;35;1mUser Columns (250.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (297.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`loginname` = 'nickto') LIMIT 1[0m
+  [4;35;1mPost Columns (250.0ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+Redirected to http://localhost:3000/posts/create
+Completed in 1250ms (DB: 1735) | 302 Found [http://localhost/posts/create]
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (313.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-08-28 13:13:47) [GET]
+  [4;36;1mUser Columns (328.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (297.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`loginname` = 'nickto') LIMIT 1[0m
+  [4;36;1mPost Columns (250.0ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+Redirected to http://localhost:3000/posts/create
+Completed in 2812ms (DB: 3126) | 302 Found [http://localhost/posts/create]
+  [4;35;1mSQL (313.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (312.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-08-28 13:13:53) [GET]
+  [4;35;1mUser Columns (265.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (297.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`loginname` = 'nickto') LIMIT 1[0m
+  [4;35;1mPost Columns (250.0ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+Redirected to http://localhost:3000/posts/create
+Completed in 1281ms (DB: 1765) | 302 Found [http://localhost/posts/create]
+  [4;36;1mSQL (312.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (297.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-08-28 13:13:57) [GET]
+  [4;36;1mUser Columns (359.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (297.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`loginname` = 'nickto') LIMIT 1[0m
+  [4;36;1mPost Columns (250.0ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+Redirected to http://localhost:3000/posts/create
+Completed in 1375ms (DB: 1843) | 302 Found [http://localhost/posts/create]
+  [4;35;1mSQL (313.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-08-28 13:14:01) [GET]
+  [4;35;1mUser Columns (265.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (407.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`loginname` = 'nickto') LIMIT 1[0m
+  [4;35;1mPost Columns (250.0ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+Redirected to http://localhost:3000/posts/create
+Completed in 1375ms (DB: 1845) | 302 Found [http://localhost/posts/create]
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (312.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-08-28 13:14:05) [GET]
+  [4;36;1mUser Columns (250.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (296.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`loginname` = 'nickto') LIMIT 1[0m
+  [4;36;1mPost Columns (266.0ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+Redirected to http://localhost:3000/posts/create
+Completed in 1250ms (DB: 1733) | 302 Found [http://localhost/posts/create]
+  [4;35;1mSQL (297.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (312.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-08-28 13:14:10) [GET]
+  [4;35;1mUser Columns (265.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (297.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`loginname` = 'nickto') LIMIT 1[0m
+  [4;35;1mPost Columns (266.0ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+Redirected to http://localhost:3000/posts/create
+Completed in 1265ms (DB: 1765) | 302 Found [http://localhost/posts/create]
+  [4;36;1mSQL (406.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (312.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-08-28 13:14:14) [GET]
+  [4;36;1mUser Columns (265.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (297.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`loginname` = 'nickto') LIMIT 1[0m
+  [4;36;1mPost Columns (250.0ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+Redirected to http://localhost:3000/posts/create
+Completed in 1297ms (DB: 1874) | 302 Found [http://localhost/posts/create]
+  [4;35;1mSQL (297.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (312.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-08-28 13:14:18) [GET]
+  [4;35;1mUser Columns (328.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (297.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`loginname` = 'nickto') LIMIT 1[0m
+  [4;35;1mPost Columns (250.0ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+Redirected to http://localhost:3000/posts/create
+Completed in 1344ms (DB: 1765) | 302 Found [http://localhost/posts/create]
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (312.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-08-28 13:14:23) [GET]
+  [4;36;1mUser Columns (265.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (297.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`loginname` = 'nickto') LIMIT 1[0m
+  [4;36;1mPost Columns (250.0ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+Redirected to http://localhost:3000/posts/create
+Completed in 1281ms (DB: 1749) | 302 Found [http://localhost/posts/create]
+  [4;35;1mSQL (406.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (313.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-08-28 13:14:27) [GET]
+  [4;35;1mUser Columns (266.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (297.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`loginname` = 'nickto') LIMIT 1[0m
+  [4;35;1mPost Columns (250.0ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+Redirected to http://localhost:3000/posts/create
+Completed in 1281ms (DB: 1860) | 302 Found [http://localhost/posts/create]
+  [4;36;1mSQL (312.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (297.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-08-28 13:14:31) [GET]
+  [4;36;1mUser Columns (344.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (312.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`loginname` = 'nickto') LIMIT 1[0m
+  [4;36;1mPost Columns (235.0ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+Redirected to http://localhost:3000/posts/create
+Completed in 1265ms (DB: 1765) | 302 Found [http://localhost/posts/create]
+  [4;35;1mSQL (312.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (406.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-08-28 13:14:36) [GET]
+  [4;35;1mUser Columns (266.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (297.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`loginname` = 'nickto') LIMIT 1[0m
+  [4;35;1mPost Columns (265.0ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+Redirected to http://localhost:3000/posts/create
+Completed in 1172ms (DB: 1780) | 302 Found [http://localhost/posts/create]
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (313.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-08-28 13:14:40) [GET]
+  [4;36;1mUser Columns (250.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (297.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`loginname` = 'nickto') LIMIT 1[0m
+  [4;36;1mPost Columns (250.0ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+Redirected to http://localhost:3000/posts/create
+Completed in 1250ms (DB: 1704) | 302 Found [http://localhost/posts/create]
+  [4;35;1mSQL (313.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-08-28 13:14:44) [GET]
+  [4;35;1mUser Columns (250.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (297.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`loginname` = 'nickto') LIMIT 1[0m
+  [4;35;1mPost Columns (266.0ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+Redirected to http://localhost:3000/posts/create
+Completed in 1281ms (DB: 1751) | 302 Found [http://localhost/posts/create]
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (313.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-08-28 13:14:49) [GET]
+  [4;36;1mUser Columns (266.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1719.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`loginname` = 'nickto') LIMIT 1[0m
+  [4;36;1mPost Columns (234.0ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+Redirected to http://localhost:3000/posts/create
+Completed in 2609ms (DB: 3095) | 302 Found [http://localhost/posts/create]
+  [4;35;1mSQL (313.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-08-28 13:15:39) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"CsOVzmrl0I648gVRj1LU278LnGbhDaoj21UMj2G8fiM=", "post"=>{"short_title"=>".....", "product_id"=>"7", "content"=>"得左都error?"}}
+  [4;35;1mUser Columns (250.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (297.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`loginname` = 'nickto') LIMIT 1[0m
+  [4;35;1mPost Columns (250.0ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+Redirected to http://localhost:3000/posts/create
+Completed in 1250ms (DB: 1720) | 302 Found [http://localhost/posts/create]
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (297.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-08-28 13:15:43) [GET]
+  [4;36;1mUser Columns (281.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (297.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`loginname` = 'nickto') LIMIT 1[0m
+  [4;36;1mPost Columns (266.0ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+Redirected to http://localhost:3000/posts/create
+Completed in 1578ms (DB: 1766) | 302 Found [http://localhost/posts/create]
+  [4;35;1mSQL (312.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-08-28 13:15:48) [GET]
+  [4;35;1mUser Columns (250.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (297.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`loginname` = 'nickto') LIMIT 1[0m
+  [4;35;1mPost Columns (375.0ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+Redirected to http://localhost:3000/posts/create
+Completed in 1375ms (DB: 1844) | 302 Found [http://localhost/posts/create]
+  [4;36;1mSQL (406.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (406.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-08-28 13:15:52) [GET]
+  [4;36;1mUser Columns (297.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (297.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`loginname` = 'nickto') LIMIT 1[0m
+  [4;36;1mPost Columns (250.0ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+Redirected to http://localhost:3000/posts/create
+Completed in 2641ms (DB: 3297) | 302 Found [http://localhost/posts/create]
+  [4;35;1mSQL (313.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-08-28 13:15:58) [GET]
+  [4;35;1mUser Columns (235.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (297.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`loginname` = 'nickto') LIMIT 1[0m
+  [4;35;1mPost Columns (282.0ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+Redirected to http://localhost:3000/posts/create
+Completed in 1265ms (DB: 1752) | 302 Found [http://localhost/posts/create]
+  [4;36;1mSQL (312.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (297.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#product_posts (for 127.0.0.1 at 2009-08-28 13:16:37) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mProduct Columns (281.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (406.0ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 7) [0m
+  [4;36;1mPost Columns (266.0ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+Rendering template within layouts/home
+Rendering home/product_posts
+  [4;35;1mPost Load (359.0ms)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.product_id = 7) [0m
+  [4;36;1mUser Columns (359.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (296.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Completed in 2656ms (View: 252, DB: 2919) | 200 OK [http://localhost/home/product_posts/7]
+  [4;36;1mSQL (313.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (500.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-08-28 13:17:04) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"CsOVzmrl0I648gVRj1LU278LnGbhDaoj21UMj2G8fiM=", "post"=>{"short_title"=>"........", "product_id"=>"7", "content"=>"救命"}}
+  [4;36;1mUser Columns (250.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (297.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`loginname` = 'nickto') LIMIT 1[0m
+  [4;36;1mPost Columns (344.0ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+Redirected to http://localhost:3000/posts/create
+Completed in 1344ms (DB: 2001) | 302 Found [http://localhost/posts/create]
+  [4;35;1mSQL (312.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-08-28 13:17:09) [GET]
+  [4;35;1mUser Columns (406.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (297.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`loginname` = 'nickto') LIMIT 1[0m
+  [4;35;1mPost Columns (250.0ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+Redirected to http://localhost:3000/posts/create
+Completed in 1438ms (DB: 1859) | 302 Found [http://localhost/posts/create]
+  [4;36;1mSQL (313.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (312.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-08-28 13:17:13) [GET]
+  [4;36;1mUser Columns (265.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (281.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`loginname` = 'nickto') LIMIT 1[0m
+  [4;36;1mPost Columns (250.0ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+Redirected to http://localhost:3000/posts/create
+Completed in 1266ms (DB: 1734) | 302 Found [http://localhost/posts/create]
+  [4;35;1mSQL (312.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-08-28 13:17:17) [GET]
+  [4;35;1mUser Columns (359.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (297.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`loginname` = 'nickto') LIMIT 1[0m
+  [4;35;1mPost Columns (250.0ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+Redirected to http://localhost:3000/posts/create
+Completed in 1375ms (DB: 1843) | 302 Found [http://localhost/posts/create]
+  [4;36;1mSQL (312.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (297.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-08-28 13:17:22) [GET]
+  [4;36;1mUser Columns (250.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (406.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`loginname` = 'nickto') LIMIT 1[0m
+  [4;36;1mPost Columns (266.0ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+Redirected to http://localhost:3000/posts/create
+Completed in 1375ms (DB: 1859) | 302 Found [http://localhost/posts/create]
+  [4;35;1mSQL (297.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (313.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#product_posts (for 127.0.0.1 at 2009-08-28 13:18:09) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mProduct Columns (281.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (297.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 7) [0m
+  [4;35;1mPost Columns (235.0ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+Rendering template within layouts/home
+Rendering home/product_posts
+  [4;36;1mPost Load (266.0ms)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.product_id = 7) [0m
+  [4;35;1mUser Columns (312.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (313.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Completed in 2531ms (View: 203, DB: 2580) | 200 OK [http://localhost/home/product_posts/7]
+  [4;35;1mSQL (313.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-08-28 13:18:24) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"CsOVzmrl0I648gVRj1LU278LnGbhDaoj21UMj2G8fiM=", "post"=>{"short_title"=>"........", "product_id"=>"7", "content"=>"救命"}}
+  [4;35;1mUser Columns (265.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (297.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`loginname` = 'nickto') LIMIT 1[0m
+  [4;35;1mPost Columns (250.0ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+Redirected to http://localhost:3000/home/product_posts/7
+Completed in 1281ms (DB: 1750) | 302 Found [http://localhost/posts/create]
+  [4;36;1mSQL (313.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (297.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#product_posts (for 127.0.0.1 at 2009-08-28 13:18:28) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mProduct Columns (375.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (297.0ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 7) [0m
+  [4;36;1mPost Columns (282.0ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+Rendering template within layouts/home
+Rendering home/product_posts
+  [4;35;1mPost Load (281.0ms)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.product_id = 7) [0m
+  [4;36;1mUser Columns (250.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (296.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Completed in 2344ms (View: 158, DB: 2719) | 200 OK [http://localhost/home/product_posts/7]
+  [4;36;1mSQL (313.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (312.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-08-28 13:19:11) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"CsOVzmrl0I648gVRj1LU278LnGbhDaoj21UMj2G8fiM=", "post"=>{"short_title"=>"........", "product_id"=>"7", "content"=>"....."}}
+  [4;36;1mUser Columns (250.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (297.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`loginname` = 'nickto') LIMIT 1[0m
+  [4;36;1mPost Columns (250.0ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+  [4;35;1mSQL (281.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mPost Create (281.0ms)[0m   [0;1mINSERT INTO `posts` (`updated_at`, `good_count`, `short_title`, `product_id`, `content`, `user_id`, `created_at`) VALUES('2009-08-28 05:19:13', 0, '........', 7, '.....', 1, '2009-08-28 05:19:13')[0m
+  [4;35;1mSQL (406.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/home/product_posts/7
+Completed in 2250ms (DB: 2671) | 302 Found [http://localhost/posts/create]
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (312.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#product_posts (for 127.0.0.1 at 2009-08-28 13:19:16) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mProduct Columns (281.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (406.0ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 7) [0m
+  [4;36;1mPost Columns (344.0ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+Rendering template within layouts/home
+Rendering home/product_posts
+  [4;35;1mPost Load (312.0ms)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.product_id = 7) [0m
+  [4;36;1mUser Columns (266.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (312.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Completed in 2891ms (View: 516, DB: 2859) | 200 OK [http://localhost/home/product_posts/7]

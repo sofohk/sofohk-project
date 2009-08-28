@@ -1,0 +1,18 @@
+<p>
+  <b>Product name:</b>
+  <%=h @product.product_name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @product.description %>
+</p>
+
+<p>
+  <%= image_tag @product.image.url(:large), :class => 'product-image' %>
+</p>
+
+<p>
+  <b>Large tags:</b>
+  <%=h @product.tags %>
+</p>

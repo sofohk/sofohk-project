@@ -1,0 +1,3 @@
+<% @tags.each do |tag| %>
+	<%= link_to tag.name, { :action => :show_products, :id => tag.name } %>
+<% end %>
