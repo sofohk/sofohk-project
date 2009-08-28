@@ -3618,3 +3618,126 @@ Rendering template within layouts/home
 Rendering home/index
   [4;36;1mProduct Columns (328.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
 Completed in 1687ms (View: 266, DB: 2015) | 200 OK [http://localhost/home]
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (516.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-08-28 23:59:18) [GET]
+  [4;36;1mTag Load (453.0ms)[0m   [0;1mSELECT tags.id, tags.name, COUNT(*) AS count FROM `tags` INNER JOIN taggings ON tags.id = taggings.tag_id INNER JOIN products ON products.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Product') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0 ORDER BY tags.click_count DESC LIMIT 20[0m
+  [4;35;1mProduct Load (312.0ms)[0m   [0mSELECT * FROM `products` ORDER BY click_count DESC LIMIT 20[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `products` ORDER BY click_count DESC LIMIT 20[0m
+Rendering template within layouts/home
+Rendering home/index
+  [4;35;1mProduct Columns (625.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mTag Columns (375.0ms)[0m   [0;1mSHOW FIELDS FROM `tags`[0m
+Completed in 3422ms (View: 188, DB: 3750) | 200 OK [http://localhost/home]
+  [4;35;1mSQL (297.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2009-08-28 23:59:37) [GET]
+  [4;35;1mProduct Columns (453.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Rendering products/new
+  [4;36;1mTagging Columns (359.0ms)[0m   [0;1mSHOW FIELDS FROM `taggings`[0m
+Completed in 1203ms (View: 78, DB: 1688) | 200 OK [http://localhost/products/new]
+  [4;35;1mSQL (297.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (313.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2009-08-29 00:00:36) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"CsOVzmrl0I648gVRj1LU278LnGbhDaoj21UMj2G8fiM=", "product"=>{"description"=>"黑豹烈轉", "tag_list"=>"黑豹, 漫畫", "image"=>#<File:C:/DOCUME~1/NICKTO~1/LOCALS~1/Temp/RackMultipart.3468.1>, "product_name"=>"黑豹"}}
+  [4;35;1mProduct Columns (375.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mSQL (250.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mProduct Create (531.0ms)[0m   [0mINSERT INTO `products` (`image_file_size`, `normal_count`, `updated_at`, `good_count`, `image_content_type`, `description`, `click_count`, `product_name`, `image_updated_at`, `bad_count`, `created_at`, `image_file_name`) VALUES(688364, 0, '2009-08-28 16:00:47', 0, 'image/jpeg', '黑豹烈轉', 0, '黑豹', '2009-08-28 16:00:37', 0, '2009-08-28 16:00:47', '_0001.jpg')[0m
+  [4;36;1mTag Load (516.0ms)[0m   [0;1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.id = `taggings`.tag_id WHERE ((`taggings`.taggable_type = 'Product') AND (`taggings`.taggable_id = 8)) [0m
+  [4;35;1mTag Load (406.0ms)[0m   [0mSELECT * FROM `tags` WHERE (name LIKE '黑豹') LIMIT 1[0m
+  [4;36;1mTag Exists (297.0ms)[0m   [0;1mSELECT `tags`.id FROM `tags` WHERE (`tags`.`name` = BINARY '黑豹') LIMIT 1[0m
+  [4;35;1mTag Create (297.0ms)[0m   [0mINSERT INTO `tags` (`name`, `click_count`) VALUES('黑豹', 0)[0m
+  [4;36;1mTagging Create (375.0ms)[0m   [0;1mINSERT INTO `taggings` (`tag_id`, `taggable_type`, `taggable_id`, `created_at`) VALUES(5, 'Product', 8, '2009-08-28 16:00:50')[0m
+  [4;35;1mTag Load (407.0ms)[0m   [0mSELECT * FROM `tags` WHERE (name LIKE '漫畫') LIMIT 1[0m
+  [4;36;1mTag Exists (297.0ms)[0m   [0;1mSELECT `tags`.id FROM `tags` WHERE (`tags`.`name` = BINARY '漫畫') LIMIT 1[0m
+  [4;35;1mTag Create (391.0ms)[0m   [0mINSERT INTO `tags` (`name`, `click_count`) VALUES('漫畫', 0)[0m
+  [4;36;1mTagging Create (281.0ms)[0m   [0;1mINSERT INTO `taggings` (`tag_id`, `taggable_type`, `taggable_id`, `created_at`) VALUES(6, 'Product', 8, '2009-08-28 16:00:51')[0m
+[paperclip] Saving attachments.
+[paperclip] saving C:/Development/sofo/public/system/products/images/8/tiny/_0001.jpg
+[paperclip] saving C:/Development/sofo/public/system/products/images/8/thumb/_0001.jpg
+[paperclip] saving C:/Development/sofo/public/system/products/images/8/large/_0001.jpg
+[paperclip] saving C:/Development/sofo/public/system/products/images/8/original/_0001.jpg
+  [4;35;1mSQL (329.0ms)[0m   [0mCOMMIT[0m
+Rendering products/show
+Completed in 15485ms (View: 31, DB: 5643) | 200 OK [http://localhost/products/create]
+  [4;36;1mSQL (312.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (313.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-08-29 00:01:03) [GET]
+
+ActionController::RoutingError (No route matches "/%E7%AB%B9%E4%BA%BA%E4%B8%80%E6%B0%B4" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (312.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-08-29 00:01:09) [GET]
+
+ActionController::RoutingError (No route matches "/%E7%AB%B9%E4%BA%BA%E4%B8%80%E6%B0%B4" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (313.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (406.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-08-29 00:01:15) [GET]
+  [4;36;1mTag Load (516.0ms)[0m   [0;1mSELECT tags.id, tags.name, COUNT(*) AS count FROM `tags` INNER JOIN taggings ON tags.id = taggings.tag_id INNER JOIN products ON products.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Product') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0 ORDER BY tags.click_count DESC LIMIT 20[0m
+  [4;35;1mProduct Load (297.0ms)[0m   [0mSELECT * FROM `products` ORDER BY click_count DESC LIMIT 20[0m
+  [4;36;1mProduct Load (312.0ms)[0m   [0;1mSELECT * FROM `products` ORDER BY created_at DESC LIMIT 20[0m
+Rendering template within layouts/home
+Rendering home/index
+  [4;35;1mProduct Columns (297.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 1875ms (View: 47, DB: 2516) | 200 OK [http://localhost/home]
+  [4;36;1mSQL (297.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (313.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#product_posts (for 127.0.0.1 at 2009-08-29 00:01:23) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mProduct Columns (266.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (406.0ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 7) [0m
+  [4;36;1mPost Columns (344.0ms)[0m   [0;1mSHOW FIELDS FROM `posts`[0m
+Rendering template within layouts/home
+Rendering home/product_posts
+  [4;35;1mPost Load (328.0ms)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.product_id = 7) [0m
+  [4;36;1mUser Columns (343.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (313.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Completed in 3094ms (View: 407, DB: 3141) | 200 OK [http://localhost/home/product_posts/7]
+  [4;35;1mSQL (297.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (406.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-08-29 00:01:34) [GET]
+  [4;35;1mTag Load (297.0ms)[0m   [0mSELECT tags.id, tags.name, COUNT(*) AS count FROM `tags` INNER JOIN taggings ON tags.id = taggings.tag_id INNER JOIN products ON products.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Product') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0 ORDER BY tags.click_count DESC LIMIT 20[0m
+  [4;36;1mProduct Load (312.0ms)[0m   [0;1mSELECT * FROM `products` ORDER BY click_count DESC LIMIT 20[0m
+  [4;35;1mProduct Load (297.0ms)[0m   [0mSELECT * FROM `products` ORDER BY created_at DESC LIMIT 20[0m
+Rendering template within layouts/home
+Rendering home/index
+  [4;36;1mProduct Columns (406.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 1765ms (View: 31, DB: 2390) | 200 OK [http://localhost/home]
+  [4;35;1mSQL (312.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (313.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#product_posts (for 127.0.0.1 at 2009-08-29 00:10:18) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mProduct Columns (282.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (297.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 8) [0m
+  [4;35;1mPost Columns (344.0ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+Rendering template within layouts/home
+Rendering home/product_posts
+  [4;36;1mPost Load (468.0ms)[0m   [0;1mSELECT * FROM `posts` WHERE (`posts`.product_id = 8) [0m
+Completed in 1938ms (View: 48, DB: 2375) | 200 OK [http://localhost/home/product_posts/8]

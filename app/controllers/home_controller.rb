@@ -1,7 +1,8 @@
 class HomeController < SofoController
   def index
     @tags = Product.tag_counts(:order => 'tags.click_count DESC', :limit => 20)
-    @Products = Product.find(:all, :order => 'click_count DESC', :limit => 20)
+    @Hot_Products = Product.find(:all, :order => 'click_count DESC', :limit => 20)
+    @New_Products = Product.find(:all, :order => 'created_at DESC', :limit => 20)
   end
   
   def tag_products
