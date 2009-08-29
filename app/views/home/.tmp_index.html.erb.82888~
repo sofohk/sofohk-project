@@ -1,0 +1,25 @@
+
+<div>
+	<fieldset>
+		<legend>New Product List</legend>
+		<% @New_Products.each do |new_product| %>
+			<%= link_to new_product.product_name, { :action => :product_posts, :id => new_product.id } %>
+		<% end %>
+	</fieldset>
+</div>
+<div>
+	<fieldset>
+		<legend>Hot Product List</legend>
+		<% @Hot_Products.each do |hot_product| %>
+			<%= link_to hot_product.product_name, { :action => :product_posts, :id => hot_product.id } %>
+		<% end %>
+	</fieldset>
+</div>
+<div>
+	<fieldset>
+		<legend>Hot Tag List</legend>
+		<% @tags.each do |tag| %>
+			<%= link_to tag.name, { :action => :tag_products, :id => tag.id } %>
+		<% end %>
+	</fieldset>
+</div>

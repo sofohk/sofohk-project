@@ -15,8 +15,8 @@
                 <div id="main_menu">
                     <ul>
                         <li class="current_page_item">
-                            <%= link_to image_tag("menu_home.gif", :border=>0), :controller => :home, :action => :index, :class => 'no_border'%>
-							<%#= link_to '首頁', :controller => :home, :action => :index %>
+                            <%= link_to image_tag("menu_home.gif", :border=>0), :controller => :home, :action => :index, :class => 'no_border' %>
+                            <%#= link_to '首頁', :controller => :home, :action => :index %>
                         </li>
                         <li class="item">
                             <%= link_to '搵貨', :controller => :home, :action => 'Explore' %>
@@ -33,9 +33,9 @@
                 </div>
                 <div id="user_menu">
                     <ul id="list">
-                        <% if session[:user_name] %>
+                        <% if session[:user_id] %>
                         <li class="item">
-                            Hi, <%= session[:user_name] %>
+                            Hi, <%= link_to session[:user_loginname], :controller => :users, :action => :show, :id => session[:user_id] %>
                         </li>
                         <li class="item">
                             <%= link_to 'Logout', :controller => :admin, :action => :logout %>
