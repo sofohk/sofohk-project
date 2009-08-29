@@ -3,19 +3,20 @@
     <head>
         <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
         <title>掃貨 Sofo.hk | 香港購物資料分享網 Hong Kong Shopping Info Sharing</title>
-        <%= stylesheet_link_tag 'scaffold' %>
+        <%#= stylesheet_link_tag 'scaffold' %>
         <%= stylesheet_link_tag 'sofo' %>
     </head>
     <body>
         <div id="header_area" class="full_width">
             <div id="page">
                 <div id="logo">
-                    掃貨 Sofo.hk
+                    <a title="home" class="sofo_logo" href="/"><img title="sofo.hk" alt="sofo.hk" src="images/sofo-logo.gif"/></a>
                 </div>
                 <div id="main_menu">
-                    <ul id="tabs">
+                    <ul>
                         <li class="current_page_item">
-                            <%= link_to '首頁', :controller => :home, :action => :index %>
+                            <%= link_to image_tag("menu_home.gif", :border=>0), :controller => :home, :action => :index, :class => 'no_border'%>
+							<%#= link_to '首頁', :controller => :home, :action => :index %>
                         </li>
                         <li class="item">
                             <%= link_to '搵貨', :controller => :home, :action => 'Explore' %>
@@ -29,7 +30,6 @@
                     </ul>
                 </div>
                 <div id="header">
-                    這是標題部份。
                 </div>
                 <div id="user_menu">
                     <ul id="list">
@@ -61,7 +61,7 @@
             </div>
             <div id="sidebars">
                 <div id="main_menu">
-                    <ul id="tab">
+                    <ul>
                         <li>
                             <%= link_to 'Profile', :controller => :user, :action => :detail %>
                         </li>
@@ -72,6 +72,19 @@
                             <%= link_to 'Password', :controller => :user, :action => :password %>
                         </li>
                     </ul>
+                </div>
+                <div id="ad_unit">
+                    <script type="text/javascript">
+                        <!--
+                        google_ad_client = "pub-7005433032432538";
+                        /* 300x250, created 8/26/09 */
+                        google_ad_slot = "3996664700";
+                        google_ad_width = 300;
+                        google_ad_height = 250;
+                        //-->
+                    </script>
+                    <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+                    </script>
                 </div>
             </div>
         </div>
